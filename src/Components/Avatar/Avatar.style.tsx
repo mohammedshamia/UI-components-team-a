@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 import {AvatarProps} from '../../@types/AvatarTypes/AvatarProps';
 
 export const Avatar = styled.div<AvatarProps>`
@@ -10,6 +10,8 @@ export const Avatar = styled.div<AvatarProps>`
     (kind === "circular" && `50%`) ||
     (kind === "square" && `none`) ||
     (kind === "rounded" && `0.35rem`)};
+    color: white;
+    background-color: red;
     font-size: ${({ size }) =>
     (size === "small" && `1.25rem`) || (size === "largger" && `1.5rem`)};
     display: flex;
@@ -29,4 +31,9 @@ export const Avatar = styled.div<AvatarProps>`
         text-indent: 10000px;
         background-color: rgba(0, 0, 0, 0.05);
     }
-`
+`;
+
+Avatar.defaultProps = {
+    size: 'small',
+    kind: 'circular',
+};
