@@ -1,27 +1,32 @@
 import styled from "styled-components";
+import {AvatarProps} from '../../@types/AvatarTypes/AvatarProps';
 
-declare const rem: (value: string | number, base?: string | number) => string;
-
-/**Interface */
-interface Props {
-    size : number
-}
-/* components */
-const Image = styled.img`
-  display: block;
-  border-radius: 50%;
-  width: 100%;
-  height: auto;
-`;
-
-// const Wrapper = styled.div<Props>`
-//   box-sizing: border-box;
-//   border-radius: 50%;
-//   border: ${rem("2px")} solid #ddd;
-//   padding: ${rem("2px")};
-//   width: ${(props) => size(props.size)};
-//   height: ${props => size(props.size)};
-//   background-color: white;
-// `;
-
-// export {Wrapper, Image};
+export const Avatar = styled.div<AvatarProps>`
+    width: ${({ size }) =>
+    (size === "small" && `4rem`) || (size === "largger" && `6rem`)};
+    height: ${({ size }) =>
+    (size === "small" && `4rem`) || (size === "largger" && `6rem`)};
+    border-radius: ${({ kind }) =>
+    (kind === "circular" && `50%`) ||
+    (kind === "square" && `none`) ||
+    (kind === "rounded" && `0.35rem`)};
+    font-size: ${({ size }) =>
+    (size === "small" && `1.25rem`) || (size === "largger" && `1.5rem`)};
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    flex-shrink: 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1;
+    justify-content: center;
+    > img {
+        color: transparent;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        text-align: center;
+        text-indent: 10000px;
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+`
