@@ -2,7 +2,7 @@ import styled, {css} from "styled-components";
 import {AvatarProps} from '../../@types/AvatarTypes/AvatarProps';
 
 const rem = (size?: string | undefined) : number =>{
-    if(typeof size !== 'undefined' && (size.split('rem')[0] === '1.25' || size.split('rem')[0] === '1.5')){
+    if(typeof size !== 'undefined' && (size.split('rem')[0] !== '1.25' || size.split('rem')[0] !== '1.5')){
         return parseInt(size.split('rem')[0]);
     }
     else {
@@ -22,7 +22,7 @@ export const Avatar = styled.div<AvatarProps>`
     color: white;
     background-color: red;
     font-size: ${({ size }) =>
-    (size === "small" && `1.25rem`) || (size === "largger" && `1.5rem`) || rem(size) };
+    (size === "small" && `1.25rem`) || (size === "largger" && `1.5rem`) || (rem(size) - 3 + 'rem').toString() };
     display: flex;
     overflow: hidden;
     position: relative;
