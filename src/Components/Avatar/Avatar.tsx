@@ -1,8 +1,7 @@
 // import styled from "styled-components";
 import styled from 'styled-components';
 import { AvatarGroupOptions } from '../../@types/AvatarTypes/AvatarGroup';
-import {AvatarProps, ICompAvatar} from '../../@types/AvatarTypes/AvatarProps';
-import { Avatar } from "./Avatar.style";
+import {ICompAvatar} from '../../@types/AvatarTypes/AvatarProps';
 import { ANIMATION_EASING, BASE_AVATAR_STYLE, boxShadows, cleanSearchParams, colorFromName } from './utils';
 
 const Img = styled.img<AvatarGroupOptions & { isOverflowAvatar?: boolean }>`
