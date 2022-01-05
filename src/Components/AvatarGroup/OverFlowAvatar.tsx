@@ -3,7 +3,7 @@ import { IOverflowAvatar } from "../../@types/AvatarTypes/IOverflowAvatar";
 import { Img } from "../Avatar/Image";
 
 
-export default function OverflowAvatar({ avatar, options, hidden }: IOverflowAvatar) {
+export default function OverflowAvatar({ avatar, options, hidden, kind }: IOverflowAvatar) {
     const size = options.size || 25;
     const backgroundColor = options.fontColor || options.backgroundColor || colorFromName(avatar, options.randomBackgroundColors);
 
@@ -29,7 +29,7 @@ export default function OverflowAvatar({ avatar, options, hidden }: IOverflowAva
         bold: options.bold ? 'true' : '',
         uppercase: options.uppercase ? '' : 'false',
         length: '5',
-        rounded: options.square ? 'false ' : ''
+        kind: `${kind}`
     });
 
     cleanSearchParams(params);
