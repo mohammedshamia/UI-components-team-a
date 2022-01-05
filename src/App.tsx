@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import AvatarPage from "./Pages/AvatarPage";
 import CardPage from "./Pages/CardPage";
@@ -7,11 +7,10 @@ import DialogPage from "./Pages/DialogPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import SkeletonPage from "./Pages/SkeletonPage";
 import TypographyPage from "./Pages/TypographyPage";
-import MainLayout from './Layout/MainLayout/mainLayout'
+
 function App() {
   return (
-    <>
-    <MainLayout>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/components/avatar" element={<AvatarPage />} />
@@ -21,8 +20,7 @@ function App() {
         <Route path="/components/typography" element={<TypographyPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      </MainLayout>
-      </>
+    </BrowserRouter>
   );
 }
 
