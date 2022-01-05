@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import skeletonType from "../@types/skeletonType";
+import skeletonType from "../../@types/skeletonType";
 
 const pulse = keyframes`
   0% {
@@ -54,7 +54,7 @@ const wave = keyframes`
 
 let Skeleton = styled.div.attrs((props: skeletonType) => ({
   as: props.component,
-  style: { ...props.style },
+  style: { ...props.style, ...props.sx },
 }))`
   background-color: rgba(0, 0, 0, 0.11);
   margin: 5px 0;
