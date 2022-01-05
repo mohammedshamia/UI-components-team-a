@@ -9,11 +9,13 @@ export const SidebarNav = styled.nav<IPropsSideBar>`
 background: white;
 display: flex;
 justify-content: center;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 position: fixed;
 border-right: 2px solid #F0F7FF;
 left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
 transition: 350ms;
 width: 100%;
+padding-top:1rem;
 max-width: 216px;
 height: 100vh;
 z-index: 10;
@@ -42,7 +44,6 @@ padding:.5rem 2rem;
 list-style: none;
 text-decoration: none;
 font-size: 16px;
-style
 &:hover {
   background:#F0F7FF;
   color: black;
