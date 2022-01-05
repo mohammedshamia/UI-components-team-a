@@ -2,16 +2,18 @@ import React from 'react';
 import { Code } from './preformattedTextElement.style';
 
 interface IProps {
-    textElement:
+    textElement: string
 }
 const preformattedTextElement = (props: IProps) => {
+    { console.log(props) }
     return (
         <div>
-            <pre>
-                <Code>
-                    {props}
-                </Code>
-            </pre>
+            <Code>
+                <pre>
+                    <code>
+                    <div dangerouslySetInnerHTML={{ __html: props.textElement }} /></code>
+                </pre>
+            </Code>
         </div>
     );
 }
