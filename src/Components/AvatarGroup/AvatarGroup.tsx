@@ -22,7 +22,7 @@ export default function AvatarGroup(props: IAvatarGroup) {
                                 key={"avatar-max-" + i} style={undefined} backgroundColor={undefined}
                                 />)
                         }
-                        <OverflowAvatar avatar={`+${props.avatars.length - props.max}`} options={props} key="avatar-overflow" hidden={overrideMax} />
+                        <OverflowAvatar avatar={`+${props.avatars.length - props.max}`} options={props} key="avatar-overflow" hidden={overrideMax} kind={props.kind} />
                     </GroupDiv>
                 );
             } else {
@@ -36,7 +36,7 @@ export default function AvatarGroup(props: IAvatarGroup) {
                                 key={"avatar-max-" + i} style={undefined} backgroundColor={undefined}
                                 />)
                         }
-                        <OverflowAvatar avatar={`+${props.avatars.length - props.max}`} options={props} key="avatar-overflow" />
+                        <OverflowAvatar avatar={`+${props.avatars.length - props.max}`} options={props} key="avatar-overflow" kind={props.kind}/>
                     </GroupDiv>
                 );
             }
