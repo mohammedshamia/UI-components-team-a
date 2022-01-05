@@ -9,16 +9,17 @@ export const SidebarNav = styled.nav<IPropsSideBar>`
 background: white;
 display: flex;
 justify-content: center;
+box-shadow: rgba(100,100,111,0.2) -4px 3px 19px 0px;
 position: fixed;
 border-right: 2px solid #F0F7FF;
-left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
 transition: 350ms;
+left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
 width: 100%;
 max-width: 216px;
 height: 100vh;
 z-index: 10;
 @media (max-width: 768px) {
-    left: ${({ sidebar }) => (!sidebar ? "0" : "-100%")};
+    left: ${({ sidebar }) => (sidebar ? "-100%" : "0")};
 }
 
 `;
@@ -42,35 +43,29 @@ padding:.5rem 2rem;
 list-style: none;
 text-decoration: none;
 font-size: 16px;
-style
 &:hover {
   background:#F0F7FF;
   color: black;
   cursor: pointer;
   padding:2rem
-  border-radius: 1rem; 
+  border-radius: .5rem; 
   
 `;
 
-export const IsActive = styled(Link)`
-background:#F0F7FF;
-color: rgb(0, 114, 229);
-cursor: pointer;
-padding:2rem
-border-radius: 1rem; 
-`
 
-export const Icon = styled.img`
+
+export const Icon = styled.img<IPropsSideBar>`
 width:1.2rem;
 height:1.2rem;
 color: rgb(0, 114, 229);
 cursor: pointer;
-padding:2rem;
+padding:.6rem;
+border:1px solid #F0F7FF;
 margin-left:1rem;
 border-radius: 1rem; 
 display:none;
 @media (max-width: 768px) {
-    display:block;
+    display: ${({ sidebar }) => (!sidebar ? "none" : "block")};
     cursor: pointer;
 
 }

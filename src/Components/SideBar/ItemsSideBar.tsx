@@ -24,11 +24,9 @@ const sideBarItems = [
 const ItemsSideBar = () => {
     const [title, setTitle] = useState<string | undefined>('');
     const { pathname } = useLocation();
-    console.log(pathname.split('/')[2]);
-
     useEffect(() => {
         setTitle(pathname.split('/')[2])
-    }, [pathname.split('/')[2]]);
+    }, [pathname]);
     return (
         <div>
             {sideBarItems.map((item, index: number) => {
