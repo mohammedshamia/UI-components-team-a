@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ItemsSideBar from './ItemsSideBar';
 import { SidebarNav, SidebarWrap, Icon } from './sideBar.style'
 import menu from '../../Assets/menu.png'
@@ -8,8 +8,8 @@ const SideBar = () => {
     const showSidebar = () => setSidebar(!sidebar);
     return (
         <>
-            <Icon src={menu} onClick={showSidebar} />
-            <SidebarNav sidebar={sidebar}>
+            <Icon src={menu} onClick={showSidebar} sidebar={sidebar}/>
+            <SidebarNav sidebar={sidebar} onClick={()=>sidebar?null:showSidebar()}>
                 <SidebarWrap>
                     <ItemsSideBar />
                 </SidebarWrap>
