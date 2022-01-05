@@ -21,7 +21,7 @@ export const GroupDiv = styled.div`
     }
 `
 export interface IAvatarGroup extends AvatarGroupOptions {
-    onAvatarClick(ele: string | AvatarProps, i: number): void;
+    kind: 'circular'|'rounded'|'square'|string
     // Array of strings with avatar names or Avatar object for more control
     avatars: (string | AvatarProps)[];
 }
