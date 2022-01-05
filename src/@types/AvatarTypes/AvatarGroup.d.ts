@@ -4,7 +4,7 @@ export interface BaseAvatarGroup {
     // If `max` is provided and displayAllOnHover is true, even the overflowing avatars will be shown when the mouse hovers over the group element
     displayAllOnHover?: boolean;
     // Should the avatars be square instead of rounded
-    square?: boolean;
+    kind: 'circular'|'rounded'|'square'|string;
     // Avatar image size in pixels. Between: 16 and 512
     size?: number;
     // Box-shadow elevation as an integer from 1 to 5
