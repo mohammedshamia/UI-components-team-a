@@ -4,7 +4,7 @@ import { CSSProperties } from 'styled-components'
 interface AvatarProps {
     kind: 'circular'|'rounded'|'square'|string
     alt?: string
-    size?: 'small' | 'largger'
+    size?: 'small' | 'largger'|string
     children?: ReactNode
     component?: ElementType
     src?: string

@@ -1,11 +1,20 @@
 import styled, {css} from "styled-components";
 import {AvatarProps} from '../../@types/AvatarTypes/AvatarProps';
 
+const rem = (size?: string | undefined) : number =>{
+    if(typeof size !== 'undefined' && (size.split('rem')[0] === '1.25' || size.split('rem')[0] === '1.5')){
+        return parseInt(size.split('rem')[0]);
+    }
+    else {
+        return 1.25;
+    }
+}
+
 export const Avatar = styled.div<AvatarProps>`
     width: ${({ size }) =>
-    (size === "small" && `4rem`) || (size === "largger" && `6rem`)};
+    (size === "small" && `4rem`) || (size === "largger" && `6rem`) || size};
     height: ${({ size }) =>
-    (size === "small" && `4rem`) || (size === "largger" && `6rem`)};
+    (size === "small" && `4rem`) || (size === "largger" && `6rem`) || size};
     border-radius: ${({ kind }) =>
     (kind === "circular" && `50%`) ||
     (kind === "square" && `none`) ||
@@ -13,7 +22,7 @@ export const Avatar = styled.div<AvatarProps>`
     color: white;
     background-color: red;
     font-size: ${({ size }) =>
-    (size === "small" && `1.25rem`) || (size === "largger" && `1.5rem`)};
+    (size === "small" && `1.25rem`) || (size === "largger" && `1.5rem`) || rem(size) };
     display: flex;
     overflow: hidden;
     position: relative;
@@ -34,6 +43,6 @@ export const Avatar = styled.div<AvatarProps>`
 `;
 
 Avatar.defaultProps = {
-    size: 'small',
+    size: 'small' || '4rem',
     kind: 'circular',
 };
