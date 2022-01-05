@@ -21,6 +21,7 @@ export const Avatar = styled.div<AvatarProps>`
     (kind === "rounded" && `0.35rem`)};
     color: white;
     background-color: red;
+    margin-left: -8px;
     font-size: ${({ size }) =>
     (size === "small" && `1.25rem`) || (size === "largger" && `1.5rem`) || (rem(size) - 3 + 'rem').toString() };
     display: flex;
