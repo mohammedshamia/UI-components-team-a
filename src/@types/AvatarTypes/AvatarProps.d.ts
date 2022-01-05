@@ -10,7 +10,9 @@ interface AvatarProps {
     src?: string
     sx?: CSSProperties
     srcSet?: string
-    imgProps?: object
+    imgProps?: object,
+    hidden?: boolean,
+    onClick?: React.MouseEventHandler<HTMLImageElement>,
 }
 ;
 
