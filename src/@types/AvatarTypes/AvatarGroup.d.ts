@@ -1,4 +1,4 @@
-export interface BaseAvatarGroup {
+interface BaseAvatarGroup {
     // Limit the number of avatars that can be shown at once. If the avatar array length is greater than this number, an overflow avatar will be shown detailing how many avatars are hidden.
     max?: number;
     // If `max` is provided and displayAllOnHover is true, even the overflowing avatars will be shown when the mouse hovers over the group element
@@ -12,7 +12,7 @@ export interface BaseAvatarGroup {
     style?: React.CSSProperties;
 }
 
-export interface AvatarGroupOptions extends BaseAvatarGroup {
+interface AvatarGroupOptions extends BaseAvatarGroup {
     // Font size in percentage of size. Between 0.1 and 1
     fontSize?: number;
     // Decide if the API should uppercase the name/initials
@@ -26,3 +26,5 @@ export interface AvatarGroupOptions extends BaseAvatarGroup {
     // Hex color for the font, without the hash (#)
     fontColor?: string;
 }
+
+export {AvatarGroupOptions,BaseAvatarGroup}
