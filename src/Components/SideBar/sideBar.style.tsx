@@ -12,6 +12,7 @@ justify-content: center;
 box-shadow: rgba(100,100,111,0.2) -4px 3px 19px 0px;
 position: fixed;
 border-right: 2px solid #F0F7FF;
+transition: 350ms;
 left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
 width: 100%;
 max-width: 216px;
