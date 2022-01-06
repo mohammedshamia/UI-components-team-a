@@ -7,9 +7,12 @@ import DialogPage from "../../Pages/DialogPage/DialogPage";
 import SkeletonPage from "../../Pages/SkeletonPage/skeletonPage";
 import TypographyPage from "../../Pages/TypeographyPage/TypographyPage";
 import { Wrapper, Main, AsideFirst, Content, AsideSecond, Columns } from './mainLayout.style';
+import Header from '../../Components/Header/Header';
+import Usage from '../../Pages/Usage/Usage';
 
 const MainLayout: React.FC = () => {
     return (<>
+        <Header />
         <Wrapper>
             <Content>
                 <Columns>
@@ -19,6 +22,7 @@ const MainLayout: React.FC = () => {
                     <Outlet />
                     <Main>
                         <Routes>
+                            <Route path="usage" element={<Usage />} />
                             <Route path="avatar" element={<AvatarPage />} />
                             <Route path="dialog" element={<DialogPage />} />
                             <Route path="card" element={<CardPage />} />
