@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import { AvatarGroupOptions } from '../../@types/AvatarTypes/AvatarGroup';
 import {ICompAvatar} from '../../@types/AvatarTypes/AvatarProps';
-import { ANIMATION_EASING, BASE_AVATAR_STYLE, boxShadows, cleanSearchParams, colorFromName } from './utils';
+import { ANIMATION_EASING, BASE_AVATAR_STYLE, boxShadows, cleanSearchParams } from './utils';
 
 const Img = styled.img<AvatarGroupOptions & { isOverflowAvatar?: boolean }>`
     height: ${props => props.size}px;
@@ -15,20 +15,29 @@ const Img = styled.img<AvatarGroupOptions & { isOverflowAvatar?: boolean }>`
     box-shadow: ${props => props.shadow ? boxShadows[props.shadow] : 'none'};
     ${BASE_AVATAR_STYLE}
 `;
-
-export const SingleAvatar = ({ avatar, options, hidden, onClick, kind, src }: ICompAvatar) => {
+const randomAvatarColor = ["f44336", "e91e63", "9c27b0", "673ab7", "3f51b5", "2196f3", "009688", "ffc107", "ff9800", "ff5722", "795548"];
+function colorFromName(name: string, avatarColors = randomAvatarColor) {
+    let hash = 0
+    let len = name.length;
+    for (let i = 0; i < len; i++) {
+        hash = ((hash << 5) - hash) + name.charCodeAt(i);
+        hash |= 0;
+    }
+    return avatarColors[Math.abs(hash) % avatarColors.length];
+}
+export const SingleAvatar = ({ avatar, hidden, onClick, kind, src, backgroundColor, fontColor, bold, uppercase, initialCharacters}: ICompAvatar) => {
     const size =  30;
 
     if (typeof avatar === "string") {
         const params = new URLSearchParams({
             size: `${size}`,
             name: avatar,
-            "font-size": `${options.fontSize || 0.66}`,
-            color: options.fontColor || "FFFFFF",
-            background: options.backgroundColor || colorFromName(avatar, options.randomBackgroundColors),
-            bold: options.bold ? 'true' : '',
-            uppercase: options.uppercase ? '' : 'false',
-            length: options.initialCharacters ? `${options.initialCharacters}` : '',
+            "font-size": `${0.66}`,
+            color: fontColor || "FFFFFF",
+            background: backgroundColor || colorFromName(avatar, randomAvatarColor),
+            bold: bold ? 'true' : '',
+            uppercase: uppercase ? '' : 'false',
+            length: initialCharacters ? `${initialCharacters}` : '',
         });
 
         cleanSearchParams(params);

@@ -4,24 +4,27 @@ import { Link } from 'react-router-dom';
 export const Wrapper = styled.div`
     display: flex;
     flex-wrap: nowrap;
-    width: 100%;
+    width: 90%;
+    margin : 50px 100px;
     flex-direction: row;
     text-align:center;
     align-items: center;
-    justify-content: center;
+    justify-content : space-between;
 `
 export const ContentLeft = styled.div`
 text-align: left;
-max-width:500px;
-
+width : 50%;
+max-width:60%;
+justify-content: center;
 margin:1rem
 `;
 
 export const ContentRight = styled.div`
 background-color: #F3F6F9;
-max-width:500px;
+width : 50%;
+max-width:70%;
+justify-content: center;
 flex-direction: row;
-margin-left:5rem;
 padding:2rem;
 text-align: left;
 border-radius: 10px;
