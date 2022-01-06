@@ -1,12 +1,14 @@
 import { ElementType, ReactNode } from "react";
 import { CSSProperties } from 'styled-components'
+import { Img } from "../../Components/Avatar/Image";
 
 
 interface ICompAvatar {
     kind: 'circular'|'rounded'|'square'|string
     style?: any;
+    src?: string;
     backgroundColor?: any;
-    avatar: string | AvatarProps;
+    avatar: string | React.ImgHTMLAttributes;
     options?: AvatarGroupOptions;
     hidden?: boolean;
     onClick?: React.MouseEventHandler<HTMLImageElement>;
