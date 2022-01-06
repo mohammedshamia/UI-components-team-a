@@ -24,5 +24,5 @@ export const GroupDiv = styled.div`
 export interface IAvatarGroup extends AvatarGroupOptions {
     kind: 'circular'|'rounded'|'square'|string
     // Array of strings with avatar names or Avatar object for more control
-    avatars: (string | ICompAvatar)[];
+    avatars: (string | HTMLImageElement)[];
 }

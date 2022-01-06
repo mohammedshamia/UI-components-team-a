@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SingleAvatar from "../Avatar/Avatar";
+import {SingleAvatar} from "../Avatar/Avatar";
 import { GroupDiv, IAvatarGroup } from "./AvatarGroup.style";
 import OverflowAvatar from "./OverFlowAvatar";
 
@@ -20,7 +20,8 @@ export default function AvatarGroup(props: IAvatarGroup) {
                                 options={props}
                                 hidden={i >= (props.max as number)}
                                 key={"avatar-max-" + i} style={undefined} backgroundColor={undefined}
-                                />)
+                                />
+                                )
                         }
                         <OverflowAvatar avatar={`+${props.avatars.length - props.max}`} options={props} key="avatar-overflow" hidden={overrideMax} kind={props.kind} />
                     </GroupDiv>
