@@ -47,30 +47,15 @@ export default function SingleAvatar({ avatar, options, hidden, onClick }: IComp
                     onClick={onClick}
                 />
         )
-    } else {
-        const params = new URLSearchParams({
-            size: `${size * 2}`,
-            name: avatar.avatar,
-            "font-size": `${avatar.fontSize || options.fontSize || 0.66}`,
-            color: avatar.fontColor || options.fontColor || "FFFFFF",
-            background: avatar.backgroundColor || options.backgroundColor || colorFromName(avatar.avatar, options.randomBackgroundColors),
-            bold: options.bold ? 'true' : '',
-            uppercase: options.uppercase ? '' : 'false',
-            length: options.initialCharacters ? `${options.initialCharacters}` : '',
-            rounded: options.square ? 'false ' : ''
-        });
-
-        cleanSearchParams(params);
-
+    } else if(typeof avatar !== "string") {
         return (
                 <Img
                     draggable="false"
                     alt={`ui-avatar-${avatar.avatar}`}
-                    src={`https://ui-avatars.com/api/?${params.toString()}`}
+                    src={avatar.src}
                     size={size}
                     kind={options.kind}
                     shadow={options.shadow}
-                    style={avatar.style || options.avatarStyle}
                     className={hidden ? "hidden" : ""}
                     onClick={onClick}
                 />
