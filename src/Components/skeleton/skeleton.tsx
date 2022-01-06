@@ -5,7 +5,7 @@ const pulse = keyframes`
   0% {
     background-color:rgba(0,0,0,0.08);
   }
-
+  
   50% {
     background-color:rgba(0,0,0,0.21);
   }
