@@ -16,12 +16,12 @@ const Img = styled.img<AvatarGroupOptions & { isOverflowAvatar?: boolean }>`
     ${BASE_AVATAR_STYLE}
 `;
 
-export default function SingleAvatar({ avatar, options, hidden, onClick }: ICompAvatar) {
-    const size = options.size || 25;
+export const SingleAvatar = ({ avatar, options, hidden, onClick, kind, src }: ICompAvatar) => {
+    const size =  30;
 
     if (typeof avatar === "string") {
         const params = new URLSearchParams({
-            size: `${size * 2}`,
+            size: `${size}`,
             name: avatar,
             "font-size": `${options.fontSize || 0.66}`,
             color: options.fontColor || "FFFFFF",
@@ -29,7 +29,6 @@ export default function SingleAvatar({ avatar, options, hidden, onClick }: IComp
             bold: options.bold ? 'true' : '',
             uppercase: options.uppercase ? '' : 'false',
             length: options.initialCharacters ? `${options.initialCharacters}` : '',
-            rounded: options.square ? 'false ' : ''
         });
 
         cleanSearchParams(params);
@@ -39,23 +38,20 @@ export default function SingleAvatar({ avatar, options, hidden, onClick }: IComp
                     draggable="false"
                     alt={`ui-avatar-${avatar}`}
                     src={`https://ui-avatars.com/api/?${params.toString()}`}
-                    size={size}
-                    kind={options.kind}
-                    shadow={options.shadow}
-                    style={options.avatarStyle}
+                    size={size * 2}
+                    kind={kind}
                     className={hidden ? "hidden" : ""}
                     onClick={onClick}
                 />
         )
-    } else if(typeof avatar !== "string") {
+    } else {
         return (
                 <Img
                     draggable="false"
-                    alt={`ui-avatar-${avatar.avatar}`}
-                    src={avatar.src}
-                    size={size}
-                    kind={options.kind}
-                    shadow={options.shadow}
+                    alt={`ui-avatar-${avatar.src}`}
+                    src={src}
+                    size={size * 2}
+                    kind={kind}
                     className={hidden ? "hidden" : ""}
                     onClick={onClick}
                 />
