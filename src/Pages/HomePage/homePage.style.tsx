@@ -39,7 +39,7 @@ display: flex;
 box-shadow: none;
 background-color: #007FFF;
 color: #fff;
-padding: 1.5rem 1rem;
+padding: 1.1rem 1rem;
 align-items: center;
 list-style: none;
 width:25%;
