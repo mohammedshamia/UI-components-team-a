@@ -4,12 +4,16 @@ import { Img } from "../../Components/Avatar/Image";
 
 
 interface ICompAvatar {
-    kind: 'circular'|'rounded'|'square'|string
+    kind: 'circular'|'rounded'|'square'|string;
+    fontColor?: string;
     style?: any;
+    bold? : boolean;
+    uppercase?: boolean;
     src?: string;
-    backgroundColor?: any;
+    backgroundColor?: string;
     avatar: string | React.ImgHTMLAttributes;
     options?: AvatarGroupOptions;
+    initialCharacters?: number;
     hidden?: boolean;
     onClick?: React.MouseEventHandler<HTMLImageElement>;
 }
