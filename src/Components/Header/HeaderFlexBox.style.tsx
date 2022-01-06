@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const HeaderFlexBox = styled.div`
   display: flex;
+margin-left:.3rem;
   align-items: center;
-  justify-content: flex-end`;
+`;
 export default HeaderFlexBox;
