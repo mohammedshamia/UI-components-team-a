@@ -9,9 +9,8 @@ export const SidebarNav = styled.nav<IPropsSideBar>`
 background: white;
 display: flex;
 justify-content: center;
-box-shadow: rgba(100,100,111,0.2) -4px 3px 19px 0px;
+box-shadow: 5px 0 5px -5px #aaa;
 position: fixed;
-border-right: 2px solid #F0F7FF;
 transition: 350ms;
 left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
 width: 100%;
