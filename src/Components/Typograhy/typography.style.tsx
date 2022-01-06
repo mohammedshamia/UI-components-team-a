@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import { IPropsTypographyStyle } from './types'
 
-export const Container = styled.div<IPropsTypographyStyle>`
+export const Container = styled.span<IPropsTypographyStyle>`
 ${({ color, margin, fontSize, weight, padding ,lineHeight}) => css<IPropsTypographyStyle>`
   font-size: ${ typeof fontSize === 'string'?fontSize : `${fontSize}+px`|| "16px"};
   color:${color || "black"}  ;

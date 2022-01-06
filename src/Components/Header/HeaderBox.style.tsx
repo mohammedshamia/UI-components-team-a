@@ -1,26 +1,11 @@
 import styled from "styled-components";
 
 const HeaderBox = styled.div`
-  border-bottom: 1px solid silver;
   display: flex;
-  padding: 10px 150px;
-
-  @media (max-width: 992px) {
-    & {
-      padding: 10px 125px;
-    }
-  }
-  @media (max-width: 768px) {
-    & {
-      padding: 10px 50px;
-    }
-  }
-
-  @media (max-width: 556px) {
-    & {
-      padding: 8px 20px;
-    }
-  }
+  justify-content:  space-between ;
+    padding : .8rem 1rem;
+    box-shadow: inset 0px -1px 1px #E7EBF0;
+    background-color: rgba(255,255,255,0.72);
 `;
 
 export default HeaderBox;

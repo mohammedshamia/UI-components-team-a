@@ -4,6 +4,10 @@ import { Menu, SidebarLink } from './sideBar.style'
 
 const sideBarItems = [
     {
+        title: "usage",
+        path: "/components/usage",
+    },
+    {
         title: "typography",
         path: "/components/typography",
     },
@@ -19,7 +23,9 @@ const sideBarItems = [
     }, {
         title: "avatar",
         path: "/components/avatar",
-    }
+    },
+  
+    
 ]
 const ItemsSideBar = () => {
     const [title, setTitle] = useState<string | undefined>('');

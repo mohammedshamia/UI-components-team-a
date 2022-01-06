@@ -7,34 +7,35 @@ const Lable = styled.label`
   height: 34px;
   align-items: center;
   justify-content: center;
-  width: 250px;
   background-color: whitesmoke;
   position: relative;
-  @media (max-width: 556px) {
-    width: 200px;
-  } ;
+  padding:0rem 1rem;
+  @media (max-width: 768px) {
+    width: 80%;
+}
 `;
 
 const Input = styled.input`
   border: none;
   font-size: 15px;
   outline: none;
-  padding: 0 5px;
   background: whitesmoke;
   color: darkslategray;
   &:focus + div {
     display: block;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+}
+ 
 `;
 
 const SearchBox = styled.div`
   box-shadow: 1px 1px 7px 0px #e7e7e7;
   position: absolute;
-  width: 230px;
-  max-width: 250px;
+width:90%;
   background: whitesmoke;
   border-radius: 10px;
-  padding: 10px;
   top: 35px;
   display: none;
   &:hover {
