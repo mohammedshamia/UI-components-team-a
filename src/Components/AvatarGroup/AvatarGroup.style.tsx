@@ -1,6 +1,7 @@
+import { ReactNode } from "react";
 import styled from "styled-components";
 import { AvatarGroupOptions } from "../../@types/AvatarTypes/AvatarGroup";
-import { AvatarProps } from "../../@types/AvatarTypes/AvatarProps";
+import { AvatarProps, ICompAvatar } from "../../@types/AvatarTypes/AvatarProps";
 export const GroupDiv = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -23,5 +24,5 @@ export const GroupDiv = styled.div`
 export interface IAvatarGroup extends AvatarGroupOptions {
     kind: 'circular'|'rounded'|'square'|string
     // Array of strings with avatar names or Avatar object for more control
-    avatars: (string | AvatarProps)[];
+    avatars: (string | ICompAvatar)[];
 }
