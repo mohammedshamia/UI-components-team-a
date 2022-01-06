@@ -4,7 +4,8 @@ const HeaderBox = styled.div`
   border-bottom: 1px solid silver;
   display: flex;
   padding: 10px 150px;
-
+  align-items: center;
+  justify-content:  space-between;
   @media (max-width: 992px) {
     & {
       padding: 10px 125px;

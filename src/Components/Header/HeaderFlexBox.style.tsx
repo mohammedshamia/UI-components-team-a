@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 const HeaderFlexBox = styled.div`
   display: flex;
-  justify-content: end;
-  flex-grow: 9;
   align-items: center;
-`;
+  justify-content: flex-end`;
 export default HeaderFlexBox;

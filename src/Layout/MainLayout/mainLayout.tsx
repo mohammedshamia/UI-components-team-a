@@ -1,11 +1,11 @@
 import React from 'react';
 import SideBar from "../../Components/SideBar/sideBar";
 import { Routes, Route, Outlet } from "react-router-dom";
-import AvatarPage from "../../Pages/AvatarPage/avatarPage";
-import CardPage from "../../Pages/CardPage/cardPage";
-import DialogPage from "../../Pages/DialogPage/dialogPage";
+import AvatarPage from "../../Pages/AvatarPage/AvatarPage";
+import CardPage from "../../Pages/CardPage/CardPage";
+import DialogPage from "../../Pages/DialogPage/DialogPage";
 import SkeletonPage from "../../Pages/SkeletonPage/skeletonPage";
-import TypographyPage from "../../Pages/TypographyPage/typographyPage";
+import TypographyPage from "../../Pages/TypeographyPage/TypographyPage";
 import { Wrapper, Main, AsideFirst, Content, AsideSecond, Columns } from './mainLayout.style';
 
 const MainLayout: React.FC = () => {
