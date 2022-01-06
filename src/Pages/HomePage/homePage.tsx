@@ -1,7 +1,11 @@
 import React from "react";
+import { SingleAvatar } from "../../Components/Avatar/Avatar";
 import Header from "../../Components/Header/Header";
 import Typography from "../../Components/Typograhy/typography";
 import { ContentLeft, ContentRight, Wrapper, Button } from './homePage.style'
+import ImageA from '../../Assets/avatar.jpg';
+import AvatarGroup from "../../Components/AvatarGroup/AvatarGroup";
+
 export default function HomePage() {
 	return (<>
 		<Header />
@@ -25,6 +29,15 @@ export default function HomePage() {
 				<Typography variant="h1" color="#3E5060">  h1. Heading</Typography>
 				<Typography variant="h2" color="#3E5060">  h2. Heading</Typography>
 				<Typography variant="h3" color="#3E5060">  h3. Heading</Typography>
+				<SingleAvatar kind='circular' avatar={<img src={ImageA} alt='lkf' />} hidden={false} src={ImageA} />
+				<br />
+				<SingleAvatar kind='rounded' avatar={<img src={ImageA} alt='lkf' />} hidden={false} src={ImageA} />
+				<br />
+				<SingleAvatar kind='square' avatar={<img src={ImageA} alt='lkf' />} hidden={false} src={ImageA} />
+				<br/>
+				<SingleAvatar kind='square' avatar="ahmad saleh" hidden={true} src={ImageA} uppercase={true} />
+				<br />
+				<AvatarGroup kind={'circular'} avatars={['Ahmad Saleh','','','']} displayAllOnHover={true} max={1} size={60} />
 			</ContentRight>
 		</Wrapper>;</>)
 }
