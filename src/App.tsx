@@ -1,33 +1,44 @@
-import "./App.css";
+import "./App.style.tsx";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage/homePage";
 import MainLayout from "./Layout/MainLayout/mainLayout";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
-import { useState } from "react";
-import ContextTheme from "./ContextAPI/themeContext";
+import { useEffect, useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "./Helper/them";
+import { Body } from "./App.style";
 
 function App() {
-  let [Dark, setTheme] = useState<boolean>(false);
+  const [theme, setTheme] = useState<string>('light');
 
-  let ToggelTheme = () => {
-    setTheme(!Dark);
-    // console.log(Dark);
+  const ToggelTheme = () => {
+    if (theme === 'light') {
+      localStorage.setItem('theme', 'dark');
+      setTheme('dark')
+    }
+    else {
+      localStorage.setItem('theme', 'light');
+      setTheme('light')
+    }
   };
 
-  let themeValus = {
-    dark: Dark,
-    toggelTheme: ToggelTheme,
-  };
+  useEffect(() => {
+    const themeValue = localStorage.getItem('theme');
+    if (themeValue) {
+      setTheme(themeValue)
+    }
+  }, []);
 
   return (
     <>
-      <ContextTheme.Provider value={themeValus}>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+        <Body>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/components/*" element={<MainLayout />} />
+          <Route path="/" element={<HomePage ToggelTheme={ToggelTheme} theme={theme}/>} />
+          <Route path="/components/*" element={<MainLayout ToggelTheme={ToggelTheme} theme={theme}/>} />
           <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </ContextTheme.Provider>
+        </Routes></Body>
+      </ThemeProvider>
     </>
   );
 }

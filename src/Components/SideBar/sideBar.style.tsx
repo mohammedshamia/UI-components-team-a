@@ -9,9 +9,10 @@ export const SidebarNav = styled.nav<IPropsSideBar>`
 background: white;
 display: flex;
 justify-content: center;
-box-shadow: 5px 0 5px -5px #aaa;
+box-shadow: 5px 0 5px -5px ${(props) =>props.theme.colors.secondary};
 position: fixed;
 transition: 350ms;
+background-color: ${(props)=>props.theme.colors.primary};
 left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
 width: 100%;
 max-width: 216px;
@@ -35,7 +36,7 @@ export const SidebarWrap = styled.div`
 export const SidebarLink = styled(Link)`
 display: flex;
 margin:1rem 0.5rem;
-color:#3E5060 ;
+color:${(props)=>props.theme.textColor.primary};
 justify-content: space-between;
 align-items: center;
 padding:.5rem 2rem;
@@ -43,10 +44,9 @@ list-style: none;
 text-decoration: none;
 font-size: 16px;
 &:hover {
-  background:#F0F7FF;
-  color: black;
+  background-color: ${(props)=>props.theme.colors.secondary};
+  color:${(props)=>props.theme.textColor.primary};
   cursor: pointer;
-  padding:2rem
   border-radius: .5rem; 
   
 `;
@@ -59,7 +59,7 @@ height:1.2rem;
 color: rgb(0, 114, 229);
 cursor: pointer;
 padding:.6rem;
-border:1px solid #F0F7FF;
+border: 2px solid ${(props) =>props.theme.colors.secondary};
 margin-left:1rem;
 border-radius: 1rem; 
 display:none;

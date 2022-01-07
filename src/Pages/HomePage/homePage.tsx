@@ -1,14 +1,16 @@
 import React from "react";
 import { SingleAvatar } from "../../Components/Avatar/Avatar";
-import Header from "../../Components/Header/Header";
+import Header from "../../Components/Common/Header/Header";
 import Typography from "../../Components/Typograhy/typography";
 import { ContentLeft, ContentRight, Wrapper, Button } from './homePage.style'
 import ImageA from '../../Assets/avatar.jpg';
 import AvatarGroup from "../../Components/AvatarGroup/AvatarGroup";
+import { IpropsTheme } from "../../@types/ThemeProps";
 
-export default function HomePage() {
+
+export default function HomePage(props: IpropsTheme) {
 	return (<>
-		<Header />
+		<Header {...props} />
 		<Wrapper>
 			<ContentLeft>
 				<Typography variant="h1" fontSize="2rem" color=" #0A1929">
@@ -34,10 +36,10 @@ export default function HomePage() {
 				<SingleAvatar kind='rounded' avatar={<img src={ImageA} alt='lkf' />} hidden={false} src={ImageA} />
 				<br />
 				<SingleAvatar kind='square' avatar={<img src={ImageA} alt='lkf' />} hidden={false} src={ImageA} />
-				<br/>
+				<br />
 				<SingleAvatar kind='square' avatar="ahmad saleh" hidden={true} src={ImageA} uppercase={true} />
 				<br />
-				<AvatarGroup kind={'circular'} avatars={['Ahmad Saleh','','','']} displayAllOnHover={true} max={1} size={60} />
+				<AvatarGroup kind={'circular'} avatars={['Ahmad Saleh', '', '', '']} displayAllOnHover={true} max={1} size={60} />
 			</ContentRight>
 		</Wrapper>;</>)
 }

@@ -10,7 +10,10 @@ export const Wrapper = styled.div`
     text-align:center;
     align-items: center;
     justify-content : space-between;
+    
 `
+
+
 export const ContentLeft = styled.div`
 text-align: left;
 width : 50%;
@@ -20,7 +23,7 @@ margin:1rem
 `;
 
 export const ContentRight = styled.div`
-background-color: #F3F6F9;
+background-color: ${(props) => props.theme.colors.secondary};
 width : 50%;
 max-width:70%;
 justify-content: center;

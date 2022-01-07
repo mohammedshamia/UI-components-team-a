@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
 display :flex;
 flex-direction: column;
+color:${(props)=>props.theme.textColor.primary};
+width:100%
 `
 
 export const Content = styled.div`
