@@ -4,26 +4,31 @@ import { Link } from 'react-router-dom';
 export const Wrapper = styled.div`
     display: flex;
     flex-wrap: nowrap;
-    width: 100%;
+    width: 90%;
+    margin : 50px 100px;
     flex-direction: row;
     text-align:center;
     align-items: center;
-    justify-content: center;
+    justify-content : space-between;
 `
 export const ContentLeft = styled.div`
 text-align: left;
-max-width:500px;
-
+width : 50%;
+max-width:60%;
+justify-content: center;
 margin:1rem
 `;
 
 export const ContentRight = styled.div`
+
 background-color: #F3F6F9;
-max-width:500px;
+width : 50%;
+max-width:100%;
+display: flex;
+flex-wrap: wrap;
 flex-direction: row;
-margin-left:5rem;
+align-content: space-between;
 padding:2rem;
-text-align: left;
 border-radius: 10px;
 @media (max-width: 768px) {
     display: none;
@@ -48,4 +53,7 @@ border-radius: .6rem;
 &:hover {
   background:#5468ff;
 }
+`
+export const Content= styled.div`
+margin-left:1.8rem;
 `
