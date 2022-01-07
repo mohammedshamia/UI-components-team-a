@@ -9,10 +9,10 @@ const Lable = styled.label`
   justify-content: center;
   background-color: whitesmoke;
   position: relative;
-  padding:0rem 1rem;
+  padding: 0rem 1rem;
   @media (max-width: 768px) {
     width: 80%;
-}
+  }
 `;
 
 const Input = styled.input`
@@ -26,17 +26,17 @@ const Input = styled.input`
   }
   @media (max-width: 768px) {
     width: 100%;
-}
- 
+  }
 `;
 
 const SearchBox = styled.div`
   box-shadow: 1px 1px 7px 0px #e7e7e7;
   position: absolute;
-width:90%;
+  width: 90%;
   background: whitesmoke;
   border-radius: 10px;
   top: 35px;
+  padding: 10px;
   display: none;
   &:hover {
     display: block !important;
