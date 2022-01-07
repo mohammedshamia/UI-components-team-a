@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { IPropsTypographyStyle } from './types'
+import { IPropsTypographyStyle } from '../../@types/Typograhytypes'
 
 export const Container = styled.span<IPropsTypographyStyle>`
 ${({ color, margin, fontSize, weight, padding ,lineHeight}) => css<IPropsTypographyStyle>`
