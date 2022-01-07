@@ -85,7 +85,9 @@ let Skeleton = styled.div.attrs((props: skeletonType) => ({
         : "0"
       : "4px"};
   animation: ${(props) =>
-      props.animation !== undefined && props.animation !== ""
+      props.animation === false
+        ? ""
+        : props.animation !== undefined && props.animation !== ""
         ? props.animation === "wave"
           ? wave
           : pulse
