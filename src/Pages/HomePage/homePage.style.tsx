@@ -20,13 +20,15 @@ margin:1rem
 `;
 
 export const ContentRight = styled.div`
+
 background-color: #F3F6F9;
 width : 50%;
-max-width:70%;
-justify-content: center;
+max-width:100%;
+display: flex;
+flex-wrap: wrap;
 flex-direction: row;
+align-content: space-between;
 padding:2rem;
-text-align: left;
 border-radius: 10px;
 @media (max-width: 768px) {
     display: none;
@@ -51,4 +53,7 @@ border-radius: .6rem;
 &:hover {
   background:#5468ff;
 }
+`
+export const Content= styled.div`
+margin-left:1.8rem;
 `
