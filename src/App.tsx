@@ -1,11 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Card from "./Components/Card";
+import BasicCard from "./Components/Card/basicCard";
+import ComplexCard from "./Components/Card/complexCard";
+import ProductCard from "./Components/Card/productCard";
 
 function App() {
   return (
     <div className="App">
-        Hello, It's UI Component Project
+      <Card />
+      <ComplexCard />
+      <BasicCard />
+      <ProductCard />
     </div>
   );
 }
