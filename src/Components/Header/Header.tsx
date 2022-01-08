@@ -5,16 +5,13 @@ import { ReactComponent as SunIcon } from "./../../Assets/SunIcon.svg";
 import HeaderBox from "./HeaderBox.style";
 import { Link } from "react-router-dom";
 import HeaderFlexBox from "./HeaderFlexBox.style";
-import { useState } from "react";
+import { useContext } from "react";
 import BottonIcon from "../BottonIcon/Botton.style";
 import Search from "../Search/Search";
+import ContextTheme from "../../ContextAPI/themeContext";
 
 export default function Header(): JSX.Element {
-  let [theme, setTheme] = useState(false);
-  let handelTheme = () => {
-    let value = theme;
-    setTheme(!value);
-  };
+  let theme = useContext(ContextTheme);
   return (
     <HeaderBox>
       <Link to="/">
@@ -28,8 +25,8 @@ export default function Header(): JSX.Element {
         >
           <GitHubIcon />
         </BottonIcon>
-        <BottonIcon onClick={handelTheme}>
-          {theme ? <MoonIcon /> : <SunIcon />}
+        <BottonIcon onClick={theme?.toggelTheme}>
+          {theme?.dark ? <MoonIcon /> : <SunIcon />}
         </BottonIcon>
       </HeaderFlexBox>
     </HeaderBox>
