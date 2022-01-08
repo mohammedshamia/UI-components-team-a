@@ -28,7 +28,7 @@ const PreFormattedTextElement = (props: IProps) => {
             <Code>
                 <pre>
                     <code>
-                        <div dangerouslySetInnerHTML={{ __html: props.textElement }} /></code>
+                        <div children={props.textElement} /></code>
                 </pre>
             </Code>
         </div>
