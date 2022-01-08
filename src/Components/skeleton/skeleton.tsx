@@ -69,7 +69,7 @@ let Skeleton = styled.div.attrs((props: skeletonType) => ({
 
   height: ${(props) => (props) =>
     props.children !== undefined
-      ? "auto"
+      ? "fit-content"
       : props.height !== undefined && props.height !== ""
       ? typeof props.width === "number"
         ? props.height + "px;"

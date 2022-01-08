@@ -73,3 +73,7 @@ export const Button = styled(Link)`
 export const Content = styled.div`
   padding-left: 1.8rem;
 `;
+export const Flex = styled.div`
+  display: flex;
+  align-items: center;
+`;

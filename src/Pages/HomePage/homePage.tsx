@@ -8,9 +8,11 @@ import {
   Wrapper,
   Button,
   Content,
+  Flex,
 } from "./homePage.style";
 import ImageA from "../../Assets/avatar.jpg";
 import AvatarGroup from "../../Components/AvatarGroup/AvatarGroup";
+import Skeleton from "../../Components/Skeleton/Skeleton";
 
 export default function HomePage() {
   return (
@@ -94,7 +96,20 @@ export default function HomePage() {
             uppercase={true}
           />
           <Content>
-            <br />
+            <Flex>
+              <Skeleton
+                variant="circular"
+                width={40}
+                height={40}
+                style={{ margin: "5px" }}
+              />
+              <Skeleton variant="text" animation="wave">
+                <Typography style={{ margin: "0" }}>we tiem a</Typography>
+              </Skeleton>
+            </Flex>
+            <Skeleton variant="rectangular" width={210} height={118} />
+            <Skeleton variant="text" />
+            <Skeleton variant="text" animation={false} width={"80%"} />
           </Content>
         </ContentRight>
       </Wrapper>
