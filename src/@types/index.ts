@@ -1,1 +1,3 @@
-export const test = {};
+import skeletonType from "./skeletonType";
+
+export interface SkeletonType extends skeletonType {}

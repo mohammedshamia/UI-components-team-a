@@ -5,7 +5,7 @@ import { Action, MainCard, Content } from "./Card.styles";
 const BasicCard = () => {
   return (
     <>
-      <MainCard>
+      <MainCard width="280px">
         <Content>
           <p>
             paragraph is a series of related sentences developing a central

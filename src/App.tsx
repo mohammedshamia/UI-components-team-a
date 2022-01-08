@@ -1,18 +1,34 @@
-import React from "react";
 import "./App.css";
-import Card from "./Components/Card";
-import BasicCard from "./Components/Card/basicCard";
-import ComplexCard from "./Components/Card/complexCard";
-import ProductCard from "./Components/Card/productCard";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage/homePage";
+import MainLayout from "./Layout/MainLayout/mainLayout";
+import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
+import { useState } from "react";
+import ContextTheme from "./ContextAPI/themeContext";
 
 function App() {
+  let [Dark, setTheme] = useState<boolean>(false);
+
+  let ToggelTheme = () => {
+    setTheme(!Dark);
+    // console.log(Dark);
+  };
+
+  let themeValus = {
+    dark: Dark,
+    toggelTheme: ToggelTheme,
+  };
+
   return (
-    <div className="App">
-      <Card />
-      <ComplexCard />
-      <BasicCard />
-      <ProductCard />
-    </div>
+    <>
+      <ContextTheme.Provider value={themeValus}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/components/*" element={<MainLayout />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </ContextTheme.Provider>
+    </>
   );
 }
 

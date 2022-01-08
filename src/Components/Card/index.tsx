@@ -14,7 +14,7 @@ const Card: FC = () => {
   return (
     <>
       <MainCard width="200px" flexDirection="column">
-        {/* <Header>Avatar herer </Header> */}
+        <Header> </Header>
         <ContentAction>
           <CardMedia src={img} />
         </ContentAction>

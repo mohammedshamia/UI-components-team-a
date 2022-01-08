@@ -9,11 +9,23 @@ import {
 } from "./Card.styles";
 import img from "../../Assets/food.jpg";
 import { Button } from "../Button";
+import { SingleAvatar } from "../Avatar/Avatar";
 
 const ComplexCard = () => {
   return (
-    <MainCard>
-      <Header>hiii</Header>
+    <MainCard width="280px">
+      <Header padding="15px">
+        <SingleAvatar
+          kind="circular"
+          avatar={<img src={img} alt="Ikf" />}
+          src={img}
+        />
+        <div style={{ marginLeft: "5px", marginTop:"5px" }}>
+          <span>Shrimp and Chorizo Paella</span>
+          <br />
+          <span>September 14, 2016</span>
+        </div>
+      </Header>
       <ContentAction>
         <img src={img} style={{ height: "100%", width: "100%" }} alt="" />
       </ContentAction>

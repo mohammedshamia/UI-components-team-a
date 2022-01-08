@@ -34,6 +34,7 @@ export const Content = styled("div")<IcontentProp>((props: IcontentProp) => ({
 }));
 
 export const Header = styled("div")((props: IheaderProps) => ({
+  display: "flex",
   height: `${props.height || "50px"}`,
   width: `${props.width || "100%"}`,
   // border: `${props.border || "1px solid black"}`,
