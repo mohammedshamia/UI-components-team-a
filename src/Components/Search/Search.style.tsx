@@ -38,6 +38,7 @@ const SearchBox = styled.div`
   top: 35px;
   padding: 10px;
   display: none;
+  z-index: 99;
   &:hover {
     display: block !important;
   }
