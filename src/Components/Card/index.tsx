@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import img from "../../Assets/profile.jpg";
-import { Button } from "../Button";
+import { Button } from "../Common/Button";
 import {
   MainCard,
   Content,

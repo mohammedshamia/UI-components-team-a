@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 const Lable = styled.label`
   display: flex;
-  border: 1px solid silver;
+  border: 2px solid ${(props) =>props.theme.colors.secondary};
   border-radius: 10px;
   height: 34px;
   align-items: center;
   justify-content: center;
-  background-color: whitesmoke;
+  background-color:${(props) =>props.theme.colors.primary}  ;  
   position: relative;
   padding: 0rem 1rem;
   @media (max-width: 768px) {
-    width: 80%;
+    width: 50%;
   }
 `;
 
@@ -19,7 +19,7 @@ const Input = styled.input`
   border: none;
   font-size: 15px;
   outline: none;
-  background: whitesmoke;
+  background-color:${(props) =>props.theme.colors.primary}  ;  
   color: darkslategray;
   &:focus + div {
     display: block;
@@ -50,7 +50,6 @@ const Item = styled.div`
   text-decoration: none;
   padding: 7px 10px 12px;
   border: 1px solid whitesmoke;
-
   &:hover {
     color: #007fff;
     border: 1px solid #007fff;

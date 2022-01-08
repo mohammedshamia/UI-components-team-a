@@ -1,5 +1,5 @@
 import { Container } from './typography.style'
-import { IPropTypography } from './types'
+import { IPropTypography } from '../../@types/Typograhytypes'
 
 // when use Typography Example:
 /*

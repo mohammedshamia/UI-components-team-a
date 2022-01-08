@@ -1,4 +1,4 @@
-import { ReactComponent as SearchIcon } from "./../../Assets/SearchIcon.svg";
+import { ReactComponent as SearchIcon } from "../../../Assets/SearchIcon.svg";
 import { Link } from "react-router-dom";
 import { Input, Item, Lable, SearchBox } from "./Search.style";
 import { ReactNode } from "react";
