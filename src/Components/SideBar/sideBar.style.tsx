@@ -18,6 +18,7 @@ width: 100%;
 max-width: 216px;
 height: 100vh;
 z-index: 10;
+margin-top:4.1rem;
 @media (max-width: 768px) {
     left: ${({ sidebar }) => (sidebar ? "-100%" : "0")};
 }
@@ -59,6 +60,7 @@ height:1.2rem;
 color: rgb(0, 114, 229);
 cursor: pointer;
 padding:.6rem;
+margin-top:4.5rem;
 border: 2px solid ${(props) =>props.theme.colors.secondary};
 margin-left:1rem;
 border-radius: 1rem; 
@@ -66,6 +68,8 @@ display:none;
 @media (max-width: 768px) {
     display: ${({ sidebar }) => (!sidebar ? "none" : "block")};
     cursor: pointer;
+    margin-top:4.5rem;
+
 
 }
-`
+` 

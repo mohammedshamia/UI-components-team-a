@@ -4,57 +4,76 @@ import { Link } from "react-router-dom";
 export const Wrapper = styled.div`
   display: flex;
   flex-wrap: nowrap;
+  padding: 50px 0 50px 150px;
   flex-direction: row;
   text-align: center;
   align-items: center;
-  justify-content: center;
-`;
+  justify-content: space-between;
+  @media (max-width: 860px) {
+    padding: 50px 70px;
+    width: auto;
+    flex-direction: column;
+    display: block;
+    text-align: center;
+}
+  @media (max-width: 360px) {
+    padding: 30px 10px;
+    flex-direction: column;
 
+  }
+`;
 export const ContentLeft = styled.div`
   text-align: left;
   width: 40%;
-  margin: 1rem;
-  @media (max-width: 768px) {
+  justify-content: center;
+  padding-right: 10%;
+  @media (max-width: 860px) {
+    padding-right: 0px;
     width: 100%;
+    text-align: center;
+    max-width: 100%;
   }
 `;
 
 export const ContentRight = styled.div`
   background-color: ${(props) => props.theme.colors.secondary};
-  width: 40%;
+  width: 60%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-content: space-between;
   padding: 2rem;
+  margin-right:1rem;
   border-radius: 10px;
-  @media (max-width: 768px) {
-    display: none;
-  }
+  @media (max-width: 860px) {
+    width: auto;
+    padding: 50px 70px;
+    text-align: center;
+  justify-content: center;
+}
 `;
 
 export const Button = styled(Link)`
-  display: flex;
+  display: block;
   box-shadow: none;
   background-color: #007fff;
   color: #fff;
-  padding: 1.1rem 1rem;
-  align-items: center;
-  list-style: none;
-  width: 25%;
+  padding: 1.1rem 0;
+  width: 190px;
+  margin: 40px 0;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 17px;
   border-radius: 0.6rem;
-  @media (max-width: 768px) {
-    width: 40%;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-  }
+  font-weight: 700;
+  text-align: center;
   &:hover {
-    background: #5468ff;
+    background: #0059b2;
+  }
+  @media (max-width: 860px) {
+    width: 100%;
   }
 `;
 export const Content = styled.div`
-  margin-left: 1.8rem;
+  padding-left: 1.8rem;
 `;

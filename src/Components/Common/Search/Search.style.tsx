@@ -11,7 +11,7 @@ const Lable = styled.label`
   position: relative;
   padding: 0rem 1rem;
   @media (max-width: 768px) {
-    width: 80%;
+    width: 50%;
   }
 `;
 
@@ -38,6 +38,7 @@ const SearchBox = styled.div`
   top: 35px;
   padding: 10px;
   display: none;
+  z-index: 99;
   &:hover {
     display: block !important;
   }
@@ -49,7 +50,6 @@ const Item = styled.div`
   text-decoration: none;
   padding: 7px 10px 12px;
   border: 1px solid whitesmoke;
-
   &:hover {
     color: #007fff;
     border: 1px solid #007fff;
