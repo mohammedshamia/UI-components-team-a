@@ -16,12 +16,15 @@ export const MainCard = styled("div")<IstyleMainCard>(
     margin: `${props.margin || "20px auto"}`,
     padding: `${props.padding || "none"}`,
     display: "flex",
-    flexDirection: `${
-      (props.flexDirection as "row") || ("column" as "column")
-    }`,
+    flexDirection: `${(props.flexDirection as "row") || ("column" as "column")
+      }`,
     borderRadius: `${props.borderRadius || "10px"}`,
     backgroundColor: `${props.backgroundColor || "none"}`,
-  })
+  }),
+  `  @media (max-width: 860px) {
+    width: auto;
+
+}`
 );
 
 export const Content = styled("div")<IcontentProp>((props: IcontentProp) => ({

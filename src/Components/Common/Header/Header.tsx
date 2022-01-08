@@ -1,17 +1,16 @@
-import { ReactComponent as Logo } from "./../../Assets/Logo.svg";
-import { ReactComponent as GitHubIcon } from "./../../Assets/GitHubIcon.svg";
-import { ReactComponent as MoonIcon } from "./../../Assets/MoonIcon.svg";
-import { ReactComponent as SunIcon } from "./../../Assets/SunIcon.svg";
+import { ReactComponent as Logo } from "../../../Assets/Logo.svg";
+import { ReactComponent as GitHubIcon } from "../../../Assets/GitHubIcon.svg";
+import { ReactComponent as MoonIcon } from "../../../Assets/MoonIcon.svg";
+import { ReactComponent as SunIcon } from "../../../Assets/SunIcon.svg";
 import HeaderBox from "./HeaderBox.style";
 import { Link } from "react-router-dom";
 import HeaderFlexBox from "./HeaderFlexBox.style";
-import { useContext } from "react";
 import BottonIcon from "../BottonIcon/Botton.style";
 import Search from "../Search/Search";
-import ContextTheme from "../../ContextAPI/themeContext";
+import { IpropsTheme } from "../../../@types/ThemeProps";
 
-export default function Header(): JSX.Element {
-  let theme = useContext(ContextTheme);
+export default function Header(props: IpropsTheme): JSX.Element {
+
   return (
     <HeaderBox>
       <Link to="/">
@@ -25,8 +24,8 @@ export default function Header(): JSX.Element {
         >
           <GitHubIcon />
         </BottonIcon>
-        <BottonIcon onClick={theme?.toggelTheme}>
-          {theme?.dark ? <MoonIcon /> : <SunIcon />}
+        <BottonIcon onClick={props.ToggelTheme}>
+          {props.theme === 'light' ? <MoonIcon /> : <SunIcon />}
         </BottonIcon>
       </HeaderFlexBox>
     </HeaderBox>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Action, Content, ContentAction, MainCard } from "./Card.styles";
 import img from "../../Assets/animal.jpg";
-import { Button } from "../Button";
+import { Button } from "../Common/Button";
 
 const ProductCard = () => {
   return (
