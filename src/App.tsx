@@ -6,7 +6,7 @@ import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./Helper/them";
-import { Body } from "./App.style";
+import { Body,GlobalStyles } from "./App.style";
 
 function App() {
   const [theme, setTheme] = useState<string>('light');
@@ -32,6 +32,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyles/>  
         <Body>
         <Routes>
           <Route path="/" element={<HomePage ToggelTheme={ToggelTheme} theme={theme}/>} />

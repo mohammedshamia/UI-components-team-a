@@ -13,8 +13,6 @@ export const lightTheme: DefaultTheme = {
         black: '#000000',
         white: '#ffffff'
     },
-
-
 }
 
 

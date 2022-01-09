@@ -8,6 +8,7 @@ const HeaderBox = styled.div`
   position: fixed;
   box-shadow: inset 0px -1px 1px ${(props) => props.theme.colors.secondary};
   background-color: ${(props) => props.theme.colors.primary};
+  z-index: 10;
   @media (max-width: 768px) {
     width: 100%;
   }
