@@ -1,17 +1,16 @@
 import styled from "styled-components";
 
 const HeaderBox = styled.div`
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 3rem;
   display: flex;
   justify-content: space-between;
-  width: 95%;
   position: fixed;
   box-shadow: inset 0px -1px 1px ${(props) => props.theme.colors.secondary};
   background-color: ${(props) => props.theme.colors.primary};
   z-index: 10;
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+  top: 0;
+  left: 0;
+  right: 0;
 `;
 
 export default HeaderBox;

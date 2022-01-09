@@ -8,26 +8,28 @@ import HeaderFlexBox from "./HeaderFlexBox.style";
 import BottonIcon from "../BottonIcon/Botton.style";
 import Search from "../Search/Search";
 import { IpropsTheme } from "../../../@types/ThemeProps";
+import React from "react";
 
-export default function Header(props: IpropsTheme): JSX.Element {
-
-  return (
-    <HeaderBox>
-      <Link to="/">
-        <Logo />
-      </Link>
-      <HeaderFlexBox>
-        <Search />
-        <BottonIcon
-          as="a"
-          href="https://github.com/mohammedshamia/UI-components-team-a"
-        >
-          <GitHubIcon />
-        </BottonIcon>
-        <BottonIcon onClick={props.ToggelTheme}>
-          {props.theme === 'light' ? <MoonIcon /> : <SunIcon />}
-        </BottonIcon>
-      </HeaderFlexBox>
-    </HeaderBox>
-  );
+export default class Header extends React.PureComponent<IpropsTheme> {
+  render() {
+    return (
+      <HeaderBox>
+        <Link to="/">
+          <Logo />
+        </Link>
+        <HeaderFlexBox>
+          <Search />
+          <BottonIcon
+            as="a"
+            href="https://github.com/mohammedshamia/UI-components-team-a"
+          >
+            <GitHubIcon />
+          </BottonIcon>
+          <BottonIcon onClick={this.props.ToggelTheme}>
+            {this.props.theme === "light" ? <MoonIcon /> : <SunIcon />}
+          </BottonIcon>
+        </HeaderFlexBox>
+      </HeaderBox>
+    );
+  }
 }

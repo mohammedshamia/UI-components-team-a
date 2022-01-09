@@ -1,33 +1,27 @@
 import { ReactComponent as SearchIcon } from "../../../Assets/SearchIcon.svg";
 import { Link } from "react-router-dom";
 import { Input, Item, Lable, SearchBox } from "./Search.style";
-import { ReactNode } from "react";
+import { ReactNode, useCallback } from "react";
 import { useState } from "react";
+import { sideBarItems } from "../../SideBar/ItemsSideBar";
 
-const items: Array<{ name: string; path: string }> = [
-  { name: "avatar", path: "/components/avatar" },
-  { name: "card", path: "/components/card" },
-  { name: "dialog", path: "/components/dialog" },
-  { name: "skeleton", path: "/components/skeleton" },
-  { name: "typography", path: "/components/typography" },
-];
+const items: Array<{ title: string; path: string }> = sideBarItems;
 
 export default function Search(): JSX.Element {
-  let [value, setValue] = useState("");
+  let [value, setValue] = useState<string>("");
 
-  let handleChange = (e: any) => {
-    let val: string = e.target.value;
+  let handleChange = (e: React.FormEvent<HTMLInputElement>) => {
+    let val: string = e.currentTarget.value.trim().toLowerCase();
     setValue(val);
   };
 
-  let filter = (words: string): ReactNode => {
-    let word = words.trim().toLowerCase();
-
+  let filter = useCallback((words: string): ReactNode => {
+    let word = words;
     if (word === "") {
       return items.map((item) => {
         return (
-          <Item as={Link} to={item.path} key={item.name}>
-            {item.name}
+          <Item as={Link} to={item.path} key={item.title}>
+            {item.title}
           </Item>
         );
       });
@@ -35,25 +29,23 @@ export default function Search(): JSX.Element {
 
     if (word !== "") {
       return items.map((item) => {
-        if (item.name.includes(word)) {
+        if (item.title.includes(word)) {
           return (
-            <Item as={Link} to={item.path} key={item.name}>
-              {item.name}
+            <Item as={Link} to={item.path} key={item.title}>
+              {item.title}
             </Item>
           );
         }
         return null;
       });
     }
-  };
+  }, []);
 
   return (
     <Lable>
       <SearchIcon />
       <Input type="text" placeholder="Search..." onChange={handleChange} />
-      <SearchBox>
-        Include: {value} {filter(value)}
-      </SearchBox>
+      <SearchBox>{filter(value)}</SearchBox>
     </Lable>
   );
 }

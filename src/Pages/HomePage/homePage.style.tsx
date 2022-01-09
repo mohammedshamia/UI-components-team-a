@@ -15,11 +15,10 @@ export const Wrapper = styled.div`
     flex-direction: column;
     display: block;
     text-align: center;
-}
+  }
   @media (max-width: 360px) {
     padding: 30px 10px;
     flex-direction: column;
-
   }
 `;
 export const ContentLeft = styled.div`
@@ -44,12 +43,14 @@ export const ContentRight = styled.div`
   flex-direction: row;
   align-content: space-between;
   padding: 2rem;
-  margin-right:1rem;
+  margin-right: 1rem;
   border-radius: 10px;
+  align-self: baseline;
+  padding-top: 100px;
+
   @media (max-width: 860px) {
     width: auto;
-
-}
+  }
 `;
 
 export const Button = styled(Link)`
@@ -74,4 +75,9 @@ export const Button = styled(Link)`
 `;
 export const Content = styled.div`
   padding-left: 1.8rem;
+  margin: 1rem;
+`;
+export const Flex = styled.div`
+  display: flex;
+  align-items: center;
 `;
