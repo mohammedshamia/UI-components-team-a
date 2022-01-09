@@ -49,10 +49,10 @@ const wave = keyframes`
 100% {
   background-image:linear-gradient(
     90deg, transparent,  transparent, transparent ,  transparent,  transparent );
-}}
+  }
 `;
 
-let Skeleton = styled.div.attrs((props: skeletonType) => ({
+const Skeleton = styled.div.attrs((props: skeletonType) => ({
   as: props.component,
   style: { ...props.style, ...props.sx },
 }))`
@@ -69,7 +69,7 @@ let Skeleton = styled.div.attrs((props: skeletonType) => ({
 
   height: ${(props) => (props) =>
     props.children !== undefined
-      ? "auto"
+      ? "fit-content"
       : props.height !== undefined && props.height !== ""
       ? typeof props.width === "number"
         ? props.height + "px;"

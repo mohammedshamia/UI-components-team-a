@@ -46,9 +46,7 @@ const RightSide = () => {
             {
                 contentPage?.map((cont, index)=>(
                     <SidebarWrap>
-                        <Typography variant="span">
-                       <MenuLinkA to={cont}>{cont}</MenuLinkA>
-                       </Typography>
+                       <MenuLinkA to={cont}><Typography>{cont}</Typography></MenuLinkA>
                     </SidebarWrap>
                 ))
             }

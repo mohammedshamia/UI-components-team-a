@@ -57,12 +57,14 @@ export const MenuLinkA = styled(LinkA)`
 text-decoration: none;
 cursor: pointer;
 color: rgb(26, 32, 39);
+p{
 
   &:hover {
     border-left:2px solid #007fff;
     padding-left:8px;
     margin:0;
    }
+}
 `
 // {export const MenuContent = styled.div`
 // text-decoration: none;

@@ -14,8 +14,8 @@ export const Container = styled.div`
   bottom: 0;
 `;
 export const Wrapper= styled.div`  
- z-index: 45;
-   background-color:rgb(18, 18, 18);
+   z-index: 45;
+  background-color: ${(props) => props.theme.colors.secondary};
    color: rgb(255, 255, 255);
    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     border-radius: 4px;
