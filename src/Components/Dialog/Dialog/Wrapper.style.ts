@@ -13,9 +13,8 @@ export const Container = styled.div`
   right: 0;
   bottom: 0;
 `;
-export const Wrapper= styled.div`
-   //position: absolute;
-   z-index: 45;
+export const Wrapper= styled.div`  
+ z-index: 45;
    background-color:rgb(18, 18, 18);
    color: rgb(255, 255, 255);
    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
