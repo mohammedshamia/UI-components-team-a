@@ -48,9 +48,7 @@ export const ContentRight = styled.div`
   border-radius: 10px;
   @media (max-width: 860px) {
     width: auto;
-    padding: 50px 70px;
-    text-align: center;
-  justify-content: center;
+
 }
 `;
 
