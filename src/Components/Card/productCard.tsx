@@ -1,7 +1,8 @@
 import React from "react";
 import { Action, Content, ContentAction, MainCard } from "./Card.styles";
 import img from "../../Assets/animal.jpg";
-import { Button } from "../Button";
+import { Button } from "../Common/Button";
+import Typography from "../Typograhy/typography";
 
 const ProductCard = () => {
   return (
@@ -15,13 +16,14 @@ const ProductCard = () => {
           />
         </ContentAction>
         <Content>
-          <p>
+          <Typography variant="p">
+            {" "}
             paragraph is a series of related sentences developing a central
             idea, called the topic. Try to think about paragraphs in terms of
             thematic unity: a paragraph is a sentence or a group of sentences
             that supports one central, unified idea. Paragraphs add one idea at
             a time to your broader argument.
-          </p>
+          </Typography>
         </Content>
         <Action>
           <Button>Bye</Button>

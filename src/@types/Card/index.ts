@@ -7,7 +7,8 @@ export interface IstyleMainCard {
   backgroundColor?: string;
   alignContent?: string;
   alignItems?: string;
-  flexDirection?:string
+  flexDirection?:string;
+  
 }
 
 export interface IcontentProp {

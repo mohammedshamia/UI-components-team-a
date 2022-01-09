@@ -20,13 +20,13 @@ export const Button = styled.button<IStyleButton>`
   padding: ${(props) => props.padding || "16px 32px"};
   border-radius: ${(props) => props.borderRadius || "4px"};
   border: ${(props) => props.border || "none"};
-  background: ${(props) => props.background || "rgb(255, 77, 77)"};
-  color: ${(props) => props.color || "black"};
+  background: ${(props) => props.background || "#007fff"};
+  color: ${(props) => props.color || "#fff"};
   font-size: ${(props) => props.fontSize || "16px"};
   cursor: ${(props) => props.cursor || "pointer"};
   align-items: "baseline";
 
   &:hover {
-    background-color: rgb(255, 179, 179);
+    background: #0059b2;
   }
 `;

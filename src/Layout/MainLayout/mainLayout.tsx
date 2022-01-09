@@ -7,12 +7,13 @@ import DialogPage from "../../Pages/DialogPage/DialogPage";
 import SkeletonPage from "../../Pages/SkeletonPage/skeletonPage";
 import TypographyPage from "../../Pages/TypeographyPage/TypographyPage";
 import { Wrapper, Main, AsideFirst, Content, AsideSecond, Columns } from './mainLayout.style';
-import Header from '../../Components/Header/Header';
+import Header from '../../Components/Common/Header/Header';
 import Usage from '../../Pages/Usage/Usage';
+import { IpropsTheme } from '../../@types/ThemeProps';
 
-const MainLayout: React.FC = () => {
+const MainLayout: React.FC<IpropsTheme> = (props:IpropsTheme) => {
     return (<>
-        <Header />
+        <Header {...props}/>
         <Wrapper>
             <Content>
                 <Columns>

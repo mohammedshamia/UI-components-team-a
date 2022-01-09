@@ -1,6 +1,6 @@
 import React from "react";
 import { SingleAvatar } from "../../Components/Avatar/Avatar";
-import Header from "../../Components/Header/Header";
+import Header from "../../Components/Common/Header/Header";
 import Typography from "../../Components/Typograhy/typography";
 import {
   ContentLeft,
@@ -12,12 +12,15 @@ import {
 } from "./homePage.style";
 import ImageA from "../../Assets/avatar.jpg";
 import AvatarGroup from "../../Components/AvatarGroup/AvatarGroup";
-import Skeleton from "../../Components/Skeleton/Skeleton";
+import Skeleton from "../../Components/Skeleton/skeleton";
+import { IpropsTheme } from "../../@types/ThemeProps";
+import ComplexCard from "../../Components/Card/complexCard";
 
-export default function HomePage() {
+export default function HomePage(props: IpropsTheme) {
   return (
     <>
-      <Header />
+      <Header {...props} />
+
       <Wrapper>
         <ContentLeft>
           <Typography variant="h1" fontSize="2rem" color=" #0A1929">
@@ -59,27 +62,6 @@ export default function HomePage() {
             </Typography>
           </Content>
           <Content>
-            <SingleAvatar
-              kind="circular"
-              avatar={<img src={ImageA} alt="lkf" />}
-              hidden={false}
-              src={ImageA}
-            />
-            <br />
-            <SingleAvatar
-              kind="rounded"
-              avatar={<img src={ImageA} alt="lkf" />}
-              hidden={false}
-              src={ImageA}
-            />
-            <br />
-            <SingleAvatar
-              kind="square"
-              avatar={<img src={ImageA} alt="lkf" />}
-              hidden={false}
-              src={ImageA}
-            />
-            <br />
             <AvatarGroup
               kind={"circular"}
               avatars={["Ahmad Saleh", "", "", ""]}
@@ -88,13 +70,26 @@ export default function HomePage() {
               size={60}
             />
           </Content>
-          <SingleAvatar
-            kind="square"
-            avatar="ahmad saleh"
-            hidden={true}
-            src={ImageA}
-            uppercase={true}
-          />
+          <Content>
+            <SingleAvatar
+              kind="circular"
+              avatar={<img src={ImageA} alt="lkf" />}
+              hidden={false}
+              src={ImageA}
+            />
+            <br />
+            <SingleAvatar
+              kind="square"
+              avatar="ahmad saleh"
+              hidden={true}
+              src={ImageA}
+              uppercase={true}
+            />
+          </Content>
+
+          <Content>
+            <ComplexCard />
+          </Content>
           <Content>
             <Flex>
               <Skeleton
@@ -109,7 +104,6 @@ export default function HomePage() {
             </Flex>
             <Skeleton variant="rectangular" width={210} height={118} />
             <Skeleton variant="text" />
-            <Skeleton variant="text" animation={false} width={"80%"} />
           </Content>
         </ContentRight>
       </Wrapper>

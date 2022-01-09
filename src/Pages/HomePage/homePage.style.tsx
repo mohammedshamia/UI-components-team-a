@@ -12,23 +12,22 @@ export const Wrapper = styled.div`
   @media (max-width: 860px) {
     padding: 50px 70px;
     width: auto;
+    flex-direction: column;
     display: block;
     text-align: center;
   }
   @media (max-width: 360px) {
     padding: 30px 10px;
+    flex-direction: column;
   }
 `;
 export const ContentLeft = styled.div`
   text-align: left;
   width: 40%;
   justify-content: center;
-
   padding-right: 10%;
-
   @media (max-width: 860px) {
     padding-right: 0px;
-
     width: 100%;
     text-align: center;
     max-width: 100%;
@@ -36,17 +35,21 @@ export const ContentLeft = styled.div`
 `;
 
 export const ContentRight = styled.div`
-  background-color: #f3f6f9;
-  width: 50%;
+  background-color: ${(props) => props.theme.colors.secondary};
+  width: 60%;
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-content: space-between;
   padding: 2rem;
+  margin-right: 1rem;
   border-radius: 10px;
+  align-self: baseline;
+  padding-top: 100px;
+
   @media (max-width: 860px) {
-    display: none;
+    width: auto;
   }
 `;
 
@@ -72,6 +75,7 @@ export const Button = styled(Link)`
 `;
 export const Content = styled.div`
   padding-left: 1.8rem;
+  margin: 1rem;
 `;
 export const Flex = styled.div`
   display: flex;
