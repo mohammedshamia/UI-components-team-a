@@ -5,24 +5,24 @@ import { Menu, SidebarLink } from './sideBar.style'
 const sideBarItems = [
     {
         title: "usage",
-        path: "/usage",
+        path: "/components//usage",
     },
     {
         title: "typography",
-        path: "/typography",
+        path: "/components/typography",
     },
     {
         title: "card",
-        path: "/card",
+        path: "/components/card",
     }, {
         title: "skeleton",
-        path: "/skeleton",
+        path: "/components/skeleton",
     }, {
         title: "dialog",
-        path: "/dialog",
+        path: "/components/dialog",
     }, {
         title: "avatar",
-        path: "/avatar",
+        path: "/components/avatar",
     },
   
     
@@ -31,7 +31,7 @@ const ItemsSideBar = () => {
     const [title, setTitle] = useState<string | undefined>('');
     const { pathname } = useLocation();
     useEffect(() => {
-        setTitle(pathname.split('/')[2])
+        setTitle(pathname.split('/')[1])
     }, [pathname]);
     return (
         <div>
