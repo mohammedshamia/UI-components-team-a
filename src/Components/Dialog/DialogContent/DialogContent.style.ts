@@ -9,7 +9,8 @@ export const Content = styled.div`
     letter-spacing: 0.0075em;
     padding: 10px 20px;
     flex: 0 0 auto;
-    color: white;
+    //color: white;
+ color: ${(props) => props.theme.colors.secondary};
 
 `;
 export const ContentText = styled.div`

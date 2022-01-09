@@ -1,7 +1,4 @@
 import * as React from 'react';
-// import DialogActions from '@mui/material/DialogActions';
-// import DialogContent from '@mui/material/DialogContent';
-// import DialogContentText from '@mui/material/DialogContentText';
 import ButtonDialog from "../../CommonComponents/Button";
 import DialogContent from "../../DialogContent";
 import {Button} from "../../CommonComponents/Button/Button.style";
@@ -23,7 +20,7 @@ export default function AlertDialog() {
 
             <Dialog
                 open={isOpen}
-                // onClose={handleClose}
+                setIsOpen={setIsOpen}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
             >
