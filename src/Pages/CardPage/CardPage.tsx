@@ -9,7 +9,7 @@ import ComponentViewDiv from "../../Components/Common/PreformattedTextElemant/co
 import Typography from "../../Components/Typograhy/typography";
 import { Content } from "../HomePage/homePage.style";
 import { Button  as ButtonC} from "../../Components/Common/Button";
-import PreFormattedTextElement from "../../Components/Common/PreformattedTextElemant/PreFormattedTextElement";
+import PreFormattedTextElement from "../../Components/Common/PreformattedTextElemant/preformattedTextElement";
 import { SingleAvatar } from "../../Components/Avatar/Avatar";
 import img from '../../Assets/food.jpg';
 

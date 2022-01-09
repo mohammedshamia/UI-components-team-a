@@ -3,7 +3,8 @@ import AlertDialog from "../../Components/Dialog/DialogEx's/Alerts/Alerts";
 import {Body} from "../../App.style";
 import Typography from "../../Components/Typograhy/typography";
 import ComponentViewDiv from "../../Components/Common/PreformattedTextElemant/componentsView";
-import PreFormattedTextElement from "../../Components/Common/PreformattedTextElemant/PreFormattedTextElement";
+import PreFormattedTextElement from "../../Components/Common/PreformattedTextElemant/preformattedTextElement";
+
 
 export default function DialogPage() {
   return (

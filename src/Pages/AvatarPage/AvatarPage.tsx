@@ -3,7 +3,7 @@ import { SingleAvatar } from "../../Components/Avatar/Avatar";
 import { Avatar } from "../../Components/Avatar/Avatar.style";
 import AvatarGroup from "../../Components/AvatarGroup/AvatarGroup";
 import ComponentViewDiv from "../../Components/Common/PreformattedTextElemant/componentsView";
-import PreFormattedTextElement from "../../Components/Common/PreformattedTextElemant/PreFormattedTextElement";
+import PreFormattedTextElement from "../../Components/Common/PreformattedTextElemant/preformattedTextElement";
 import Typography from "../../Components/Typograhy/typography";
 import Image1 from './1.jpg'
 import Image2 from './2.jpg'

@@ -1,6 +1,6 @@
 import React from "react";
 import ComponentViewDiv from "../../Components/Common/PreformattedTextElemant/componentsView";
-import PreFormattedTextElement from "../../Components/Common/PreformattedTextElemant/PreFormattedTextElement";
+import PreFormattedTextElement from "../../Components/Common/PreformattedTextElemant/preformattedTextElement";
 import Typography from "../../Components/Typograhy/typography";
 
 export default function TypographyPage() {
