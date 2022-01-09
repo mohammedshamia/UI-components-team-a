@@ -7,7 +7,7 @@ export const Title = styled.div`
     font-size: 1.25rem;
     line-height: 1.6;
     letter-spacing: 0.0075em;
-    padding: 10px 20px;
+    padding: 5px 7px;
     flex: 0 0 auto;
     color: white;
 
