@@ -5,24 +5,24 @@ import { Menu, SidebarLink } from './sideBar.style'
 const sideBarItems = [
     {
         title: "usage",
-        path: "/components/usage",
+        path: "/usage",
     },
     {
         title: "typography",
-        path: "/components/typography",
+        path: "/typography",
     },
     {
         title: "card",
-        path: "/components/card",
+        path: "/card",
     }, {
         title: "skeleton",
-        path: "/components/skeleton",
+        path: "/skeleton",
     }, {
         title: "dialog",
-        path: "/components/dialog",
+        path: "/dialog",
     }, {
         title: "avatar",
-        path: "/components/avatar",
+        path: "/avatar",
     },
   
     
@@ -38,7 +38,7 @@ const ItemsSideBar = () => {
             {sideBarItems.map((item, index: number) => {
                 return <Menu key={index} >
                     <SidebarLink
-                        to={item.path} style={title == item.title ? {
+                        to={item.path} style={title === item.title ? {
                             color: 'rgb(0, 114, 229)',
                             background: '#F0F7FF',
                             borderRadius: '.5rem'
