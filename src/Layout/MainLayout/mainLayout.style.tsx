@@ -21,7 +21,7 @@ display :flex;
 flex:1
 `
 export const Main = styled.div`
-margin:1rem;
+margin:5rem;
 flex:3;
 order:2;
 margin-top:5rem;
@@ -33,8 +33,10 @@ flex:1.2;
 order:1;
 `
 export const AsideSecond = styled.div`
-margin:1rem;
-flex:1;
+margin-top : 100px;
+display : flex;
+flex-direction: column ;
+flex:2;
 order:3;
 @media (max-width: 768px) {
     display: none;
