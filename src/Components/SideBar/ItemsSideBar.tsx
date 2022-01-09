@@ -31,14 +31,14 @@ const ItemsSideBar = () => {
     const [title, setTitle] = useState<string | undefined>('');
     const { pathname } = useLocation();
     useEffect(() => {
-        setTitle(pathname.split('/')[1])
+        setTitle(pathname.split('/')[2])
     }, [pathname]);
     return (
         <div>
             {sideBarItems.map((item, index: number) => {
                 return <Menu key={index} >
                     <SidebarLink
-                        to={item.path} style={title == item.title ? {
+                        to={item.path} style={title === item.title ? {
                             color: 'rgb(0, 114, 229)',
                             background: '#F0F7FF',
                             borderRadius: '.5rem'
