@@ -1,6 +1,6 @@
 [
     {
-        "title": "Avatar",
+        "title": "avatar",
         "Contents":[
             "Image Avatars",
             "Letter Avatars",
@@ -12,7 +12,7 @@
         ]
     },
     {
-        "title": "Dialog",
+        "title": "dialog",
         "Contents":[
             "Alerts",
             "Transitions",
@@ -28,7 +28,7 @@
         ]
     },
     {
-        "title": "Typoghraphy",
+        "title": "typography",
         "Contents": [
             "General",
             "Component",
@@ -41,7 +41,7 @@
         ]
     },
     {
-        "title": "Skelaton",
+        "title": "skeleton",
         "Contents": [
             "Usage",
             "Variants",
@@ -52,12 +52,12 @@
     }
     ,
     {
-        "title": "Card",
+        "title": "card",
         "Contents":[
             "Basic Card",
             "Outlined Card",
             "Complex Interaction",
-            "Media",
+            "Product Card",
             "Primary Action",
             "API"
         ]
