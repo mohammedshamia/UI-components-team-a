@@ -7,9 +7,9 @@ interface ContentProps {
 const DialogContent:React.FC <ContentProps> = ({ children, DialogContentText})=> {
     return (
         <Content>
-            <ContentText>
-                {{children}}
-            </ContentText>
+            {/*<ContentText>*/}
+                {children}
+            {/*</ContentText>*/}
 
         </Content>
     )};

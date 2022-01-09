@@ -13,10 +13,6 @@ import DialogAction from "../../DialogActions";
 export default function AlertDialog() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    // const handleClickOpen = () => {
-    //     setIsOpen(true);
-    // };
-
     const handleClose = () => {
         setIsOpen(false);
     };
@@ -27,7 +23,7 @@ export default function AlertDialog() {
 
             <Dialog
                 open={isOpen}
-                onClose={handleClose}
+                // onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
             >

@@ -1,18 +1,20 @@
 import * as React from 'react';
-import {Wrapper } from './Wrapper.style'
-interface ModalProps {
+import {Wrapper, Container } from './Wrapper.style'
+interface DialogProps {
     children? : React.ReactNode;
     open:boolean;
-    onClose?:()=> void
-
+    onClose?:()=> void;
 }
-const Dialog:React.FC <ModalProps> = ({children, open, onClose})=> {
+const Dialog:React.FC <DialogProps> = ({children, open, onClose, ...props})=> {
+    console.log(open, 'open');
     return (
         <>
         {open&&
-        <Wrapper>
-            {children}
-        </Wrapper>
+        <Container>
+            <Wrapper>
+                {children}
+            </Wrapper>
+        </Container>
         }
       </>
     )};
