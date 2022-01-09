@@ -1,3 +1,4 @@
+
 import "./App.style.tsx";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./Pages/HomePage/homePage";
@@ -7,6 +8,7 @@ import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import { darkTheme, lightTheme } from "./Helper/them";
 import { Body,GlobalStyles } from "./App.style";
+
 
 function App() {
   const [theme, setTheme] = useState<string>('light');
@@ -30,6 +32,7 @@ function App() {
   }, []);
 
   return (
+
     <>
       <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles/>  
@@ -41,6 +44,7 @@ function App() {
         </Routes></Body>
       </ThemeProvider>
     </>
+
   );
 }
 

@@ -10,6 +10,7 @@ import { Wrapper, Main, AsideFirst, Content, AsideSecond, Columns } from './main
 import Header from '../../Components/Common/Header/Header';
 import Usage from '../../Pages/Usage/Usage';
 import { IpropsTheme } from '../../@types/ThemeProps';
+import RightSide from '../../Components/SideBar/RightSide';
 
 const MainLayout: React.FC<IpropsTheme> = (props:IpropsTheme) => {
     return (<>
@@ -30,7 +31,7 @@ const MainLayout: React.FC<IpropsTheme> = (props:IpropsTheme) => {
                             <Route path="skeleton" element={<SkeletonPage />} />
                             <Route path="typography" element={<TypographyPage />} />
                         </Routes></Main>
-                    <AsideSecond>Contents</AsideSecond>
+                        <RightSide />
                 </Columns>
             </Content>
         </Wrapper>

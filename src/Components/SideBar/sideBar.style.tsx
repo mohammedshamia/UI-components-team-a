@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { CSSProperties } from 'react';
+import {Link as LinkA} from 'react-scroll';
 
 interface IPropsSideBar {
     sidebar?: boolean
@@ -49,10 +50,35 @@ font-size: 16px;
   color:${(props)=>props.theme.textColor.primary};
   cursor: pointer;
   border-radius: .5rem; 
-  
+}
 `;
 
-
+export const MenuLinkA = styled(LinkA)`
+text-decoration: none;
+cursor: pointer;
+color: rgb(26, 32, 39);
+&:hover {
+ border-left:2px solid #007fff;
+ padding-left:8px;
+ margin:0;
+}
+p{
+  &:hover {
+    border-left:2px solid #007fff;
+    padding-left:8px;
+    margin:0;
+   }
+}
+`
+// {export const MenuContent = styled.div`
+// text-decoration: none;
+// cursor: pointer;
+// color: rgb(26, 32, 39);
+// &:hover {
+//   border-left-color: rgb(0, 114, 229);
+//   color: rgb(0, 114, 229);
+// }
+// `}
 
 export const Icon = styled.img<IPropsSideBar>`
 width:1.2rem;
