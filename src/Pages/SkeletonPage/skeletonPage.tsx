@@ -14,7 +14,7 @@ export default function SkeletonPage() {
       <br/>
       <br/>
       <br/>
-      <Typography variant="h2">Usage</Typography>
+      <Typography variant="h2" id="Usage">Usage</Typography>
       <Typography variant="p">The component is designed to be used directly in your components. For instance:</Typography>
       <PreFormattedTextElement textElement={`
       {
@@ -36,7 +36,7 @@ export default function SkeletonPage() {
       {// ----------------------------- SHOWING CASE OF VARIANT -------------------------------------
 
       }
-      <Typography variant="h2">Variant</Typography>
+      <Typography variant="h2" id="Variants">Variant</Typography>
       <Typography>The component supports 3 shape variants:</Typography>
       <ComponentViewDiv element={
         <>
@@ -55,7 +55,7 @@ export default function SkeletonPage() {
       `} />
       {// --------------------------- SHOWING CASE OF ANIMATIONS ------------------------------------
       }
-      <Typography variant="h2">Animations</Typography>
+      <Typography variant="h2" id="Animations">Animations</Typography>
       <Typography variant="p">By default, the skeleton pulsates, but you can change the animation to a wave or disable it entirely.</Typography>
       <ComponentViewDiv element={
         <>

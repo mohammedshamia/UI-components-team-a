@@ -24,7 +24,7 @@ export default function AvatarPage() {
     <br/>
     {// -------------------------ADDING SECTION OF IMAGE AVATAR--------------------------
     }
-    <Typography variant="h2" id="ImageAvatars">Image Avatar</Typography>
+    <Typography variant="h2" id="Image Avatars">Image Avatar</Typography>
     <Typography>Image avatars can be created by passing standard img props src or srcSet to the component.</Typography>
     <br/>
     <ComponentViewDiv element={
@@ -45,7 +45,7 @@ export default function AvatarPage() {
     <br/>
     {// -----------------------ADDING SECTION OF LETTER AVATAR----------------------
     }
-    <Typography variant="h2" id="ImageLetters">Avatar Letters</Typography>
+    <Typography variant="h2" id="Letter Avatars">Avatar Letters</Typography>
     <Typography>Avatars containing simple characters can be created by passing a string as children.</Typography>
     <br/>
     <ComponentViewDiv element={
@@ -71,7 +71,7 @@ export default function AvatarPage() {
     {//------------------SHOWING CASE IN CHANGING BACKGROUND COLOR------------------------
 
     }
-    <Typography variant="h3">Changing Background Color</Typography>
+    <Typography variant="h3" id="Sizes">Changing Background Color</Typography>
     <Typography>You can use different background colors for the avatar. The following demo generates the color based on the name of the person.</Typography>
     <ComponentViewDiv element={
       <>
@@ -97,7 +97,7 @@ export default function AvatarPage() {
     {//----------------SHOWING CASE IN CHANGING KIND OF COMPONENT--------------------
 
     }
-    <Typography variant="h2" id="Variants">Avatar Kinds - Variants</Typography>
+    <Typography variant="h2" id="Icon Avatars">Avatar Kinds - Variants</Typography>
     <Typography>Avatars containing simple characters can be created by passing a string as children.</Typography>
     <br/>
     <ComponentViewDiv element={
@@ -121,7 +121,7 @@ export default function AvatarPage() {
     {// -------------------------------- SHOWING CASE IN GROUPED COMPONENTS AVATAR ----------------------------------
 
     }
-    <Typography variant="h2" id="Variants">Avatar Kinds - Variants</Typography>
+    <Typography variant="h2" id="Grouped Avatars">Avatar Kinds - Variants</Typography>
     <Typography>AvatarGroup renders its children as a stack. Use the max prop to limit the number of avatars.</Typography>
     <ComponentViewDiv element={
       <>
@@ -135,7 +135,7 @@ export default function AvatarPage() {
     {// ----------------------------- SHOWING CASE IN GROUP AND HOVER ---------------------------------------
 
     }
-    <Typography>If you need to control the total number of avatars not shown, you can use the <pre style={{display: 'inline', fontSize: '15px'}}>max</pre> prop</Typography>
+    <Typography id="Animation Group Avatar">If you need to control the total number of avatars not shown, you can use the <pre style={{display: 'inline', fontSize: '15px'}}>max</pre> prop</Typography>
     <br/>
     <ComponentViewDiv element={
       <>

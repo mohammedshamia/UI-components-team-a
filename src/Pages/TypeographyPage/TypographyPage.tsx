@@ -6,7 +6,7 @@ import Typography from "../../Components/Typograhy/typography";
 export default function TypographyPage() {
   return (
     <div>
-      <Typography variant="h1">Typography</Typography>
+      <Typography variant="h1" id = "General">Typography</Typography>
       <Typography>Use typography to present your design and content as clearly and efficiently as possible.</Typography>
       <br />
       <br />
@@ -19,7 +19,7 @@ export default function TypographyPage() {
       {// --------------------------- SHOWING CASE OF TYPOGHRAPHY ------------------------------------------
 
       }
-      <Typography variant="h2">Component</Typography>
+      <Typography variant="h2" id = "Component">Component</Typography>
       <Typography>The Typography component makes it easy to apply a default set of font weights and sizes in your application.</Typography>
       <ComponentViewDiv element={
         <>
@@ -57,7 +57,7 @@ export default function TypographyPage() {
       {// --------------------------------------- SHOWING CASE OF CHANGING COLOR ----------------------------------
 
       }
-      <Typography variant="h2">Changing Color</Typography>
+      <Typography variant="h2" id="Theme">Changing Color</Typography>
       <Typography>In some situations you might not be able to use the Typography component. Hopefully, you might be able to take advantage of the typography keys of the theme.
       </Typography>
       <ComponentViewDiv element={
