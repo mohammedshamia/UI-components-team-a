@@ -5,7 +5,7 @@ const pulse = keyframes`
   0% {
     background-color:rgba(0,0,0,0.08);
   }
-
+  
   50% {
     background-color:rgba(0,0,0,0.21);
   }
@@ -85,7 +85,9 @@ let Skeleton = styled.div.attrs((props: skeletonType) => ({
         : "0"
       : "4px"};
   animation: ${(props) =>
-      props.animation !== undefined && props.animation !== ""
+      props.animation === false
+        ? ""
+        : props.animation !== undefined && props.animation !== ""
         ? props.animation === "wave"
           ? wave
           : pulse

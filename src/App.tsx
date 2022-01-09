@@ -1,28 +1,50 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
-import AvatarPage from "./Pages/AvatarPage";
-import CardPage from "./Pages/CardPage";
-import DialogPage from "./Pages/DialogPage";
-import NotFoundPage from "./Pages/NotFoundPage";
-import SkeletonPage from "./Pages/SkeletonPage";
-import TypographyPage from "./Pages/TypographyPage";
-import AlertDialog from "./Components/Dialog/DialogEx's/Alerts/Alerts";
+
+import "./App.style.tsx";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage/homePage";
+import MainLayout from "./Layout/MainLayout/mainLayout";
+import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
+import { useEffect, useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "./Helper/them";
+import { Body,GlobalStyles } from "./App.style";
+
 
 function App() {
+  const [theme, setTheme] = useState<string>('light');
+
+  const ToggelTheme = () => {
+    if (theme === 'light') {
+      localStorage.setItem('theme', 'dark');
+      setTheme('dark')
+    }
+    else {
+      localStorage.setItem('theme', 'light');
+      setTheme('light')
+    }
+  };
+
+  useEffect(() => {
+    const themeValue = localStorage.getItem('theme');
+    if (themeValue) {
+      setTheme(themeValue)
+    }
+  }, []);
+
   return (
-    <BrowserRouter>
-      <AlertDialog/>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/components/avatar" element={<AvatarPage />} />
-        <Route path="/components/dialog" element={<DialogPage />} />
-        <Route path="/components/card" element={<CardPage />} />
-        <Route path="/components/skeleton" element={<SkeletonPage />} />
-        <Route path="/components/typography" element={<TypographyPage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </BrowserRouter>
+
+    <>
+      <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyles/>  
+        <Body>
+        <Routes>
+          <Route path="/" element={<HomePage ToggelTheme={ToggelTheme} theme={theme}/>} />
+          <Route path="/components/*" element={<MainLayout ToggelTheme={ToggelTheme} theme={theme}/>} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes></Body>
+      </ThemeProvider>
+    </>
+
   );
 }
 

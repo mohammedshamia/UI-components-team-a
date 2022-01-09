@@ -21,7 +21,7 @@ import { Code } from './preformattedTextElement.style';
 interface IProps {
     textElement: string
 }
-const preformattedTextElement = (props: IProps) => {
+const PreFormattedTextElement = (props: IProps) => {
     { console.log(props) }
     return (
         <div>
@@ -35,4 +35,4 @@ const preformattedTextElement = (props: IProps) => {
     );
 }
 
-export default preformattedTextElement;
+export default PreFormattedTextElement;

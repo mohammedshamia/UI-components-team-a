@@ -7,7 +7,7 @@ interface skeletonType {
   sx?:CSSProperties;
   component?: ElementType;
   children?:boolean | ReactChild | ReactFragment | ReactPortal | null & Node | undefined;
-  animation?: "pulse" | "wave" | string |undefined;
+  animation?: "pulse" | "wave" | string |undefined|false;
   height?: number | string;
   variant?: "circular" | "rectangular" | "text" | string ;
 }
