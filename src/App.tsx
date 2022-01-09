@@ -7,10 +7,12 @@ import DialogPage from "./Pages/DialogPage";
 import NotFoundPage from "./Pages/NotFoundPage";
 import SkeletonPage from "./Pages/SkeletonPage";
 import TypographyPage from "./Pages/TypographyPage";
+import AlertDialog from "./Components/Dialog/DialogEx's/Alerts/Alerts";
 
 function App() {
   return (
     <BrowserRouter>
+      <AlertDialog/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/components/avatar" element={<AvatarPage />} />
