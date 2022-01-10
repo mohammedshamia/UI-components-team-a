@@ -49,7 +49,7 @@ export const ContentRight = styled.div`
   padding-top: 100px;
 
   @media (max-width: 860px) {
-    width: auto;
+    display: none;
   }
 `;
 
