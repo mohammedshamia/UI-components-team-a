@@ -23,7 +23,7 @@ const Usage = () => {
             </Typography>
             <ComponentViewDiv element={
         <>
-        <div style={{width: "90%" , textAlign: "center" , margin:'5%'}}>
+        <div style={{width: "90%"}}>
         <MainCard width="280px">
         <Content>
           <Typography variant='p' fontSize={16}>

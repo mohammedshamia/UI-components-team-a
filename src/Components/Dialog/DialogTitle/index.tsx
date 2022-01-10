@@ -6,7 +6,7 @@ interface TitleProps {
 }
 const DialogTitle:React.FC <TitleProps> = ({title})=> {
     return (
-        <Title><Typography variant="h2" color="white">{title}</Typography></Title>
+        <Title><Typography variant="h2">{title}</Typography></Title>
 
     )};
 export default DialogTitle;
