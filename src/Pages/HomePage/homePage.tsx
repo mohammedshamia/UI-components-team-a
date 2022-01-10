@@ -22,7 +22,7 @@ export default function HomePage(props: IpropsTheme) {
 
       <Wrapper>
         <ContentLeft>
-          <Typography variant="h1" fontSize="2rem" color=" #0A1929">
+          <Typography variant="h1" fontSize="2rem" >
             The React
             <Typography
               variant="span"
@@ -48,14 +48,14 @@ export default function HomePage(props: IpropsTheme) {
         </ContentLeft>
         <ContentRight>
           <Content>
-            <Typography variant="h1" color="#3E5060">
+            <Typography variant="h1">
               h1. Heading
             </Typography>
-            <Typography variant="h2" color="#3E5060">
+            <Typography variant="h2">
               {" "}
               h2. Heading
             </Typography>
-            <Typography variant="h3" color="#3E5060">
+            <Typography variant="h3">
               {" "}
               h3. Heading
             </Typography>

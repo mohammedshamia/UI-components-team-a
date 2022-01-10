@@ -38,7 +38,7 @@ export default function CardPage() {
 <br />
       <ComponentViewDiv element={
         <>
-        <div style={{width: "90%" , textAlign: "center" , margin:'5%'}}>
+        <div style={{width: "90%", margin:'5%'}}>
         <MainCard width="280px">
         <Content>
           <Typography variant='p' fontSize={16}>
@@ -83,7 +83,7 @@ export default function CardPage() {
       <Typography>On desktop, card content can expand. (Click the downward chevron to view the recipe.)</Typography>
       <ComponentViewDiv element={
         <>
-        <div style={{width: "90%" , textAlign: "center" , margin:'5%'}}>
+        <div style={{width: "90%" , margin:'5%'}}>
         <MainCard width="280px">
       <Header padding="15px">
         <SingleAvatar
@@ -160,7 +160,7 @@ export default function CardPage() {
       </Typography>
       <ComponentViewDiv element={
         <>
-        <div style={{width: "90%" , textAlign: "center" , margin:'5%'}}>
+        <div style={{width: "90%"  , margin:'5%'}}>
         <MainCard width="280px">
         <ContentAction padding="none" margin="none">
           <img
