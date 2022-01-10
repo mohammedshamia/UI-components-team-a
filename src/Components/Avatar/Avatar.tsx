@@ -32,7 +32,7 @@ export const SingleAvatar = ({ avatar, hidden, onClick, kind, src, backgroundCol
         const params = new URLSearchParams({
             size: `${size}`,
             name: avatar,
-            "font-size": `${0.66}`,
+            "font-size": `${0.5}`,
             color: fontColor || "FFFFFF",
             background: backgroundColor || colorFromName(avatar, randomAvatarColor),
             bold: bold ? 'true' : '',
