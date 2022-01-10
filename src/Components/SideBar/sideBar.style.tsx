@@ -58,13 +58,15 @@ text-decoration: none;
 cursor: pointer;
 color: rgb(26, 32, 39);
 p{
-
+  margin:.8rem;
   &:hover {
-    border-left:2px solid #007fff;
     padding-left:8px;
-    margin:0;
+    border-left: 2px solid rgb(178, 186, 194);
+    color: rgb(111, 126, 140);
+  
    }
 }
+
 `
 // {export const MenuContent = styled.div`
 // text-decoration: none;
